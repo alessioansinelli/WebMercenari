@@ -1,0 +1,23 @@
+﻿div.homepage{margin-top:15px;}
+
+.pnewshome {margin:10px 0;}
+.pnewshome a{color:#5e121c;text-decoration:none;font-weight:bold;}
+.pnewshome a:hover{color:#5e121c;text-decoration:underline;}
+
+.homepage .grid_4 h2{margin:5px 0; text-transform:none;}
+
+.photogallery h2{font-size:14px;}
+
+div.fb{padding:10px 0 0 30px;}
+a.fb img{width:140px;border:none; margin:10px 0;}
+
+
+ul.notizie li{margin:0 0 10px 0;}
+ul.notizie li h2{background: transparent url('/images/stemmi/stella_20.png') no-repeat; padding:0 0 0 25px; line-height:20px;}
+
+ul.notizie li img{float:left;margin:0 5px 0 0;}
+
+ul.fotohome li a img{border:none;}
+
+.leggitutto {text-align:right; margin-top:5px;}
+.leggitutto a{color:#5e121c;}

@@ -1,0 +1,84 @@
+﻿@font-face {
+ font-family: 'RockwellExtraBold';
+ src: url('font/ROCKEB.ttf');
+ src: local('Rockwell Extra Bold'), url('font/ROCKEB.ttf') format('truetype');
+} 
+
+
+*{padding:0;margin:0;}
+ul{list-style:none;}
+
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:left;}
+
+.c{text-align:center;}
+.j{text-align:justify;}
+.l{text-align:left;}
+.r{text-align:right;}
+
+.nob{border:none;}
+
+.m10{margin:10px;}
+.mr10{margin-right:10px;}
+.ml10{margin-left:10px;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
+
+
+body 
+{
+	background:url("/images/layout/photosfondo.jpg") no-repeat fixed center top #F8F7E5;
+	/*background: transparent url('/images/layout/sfondo.jpg');*/
+	font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;
+	font-size:12px;
+	line-height:1.2em;
+	color:#5e121c;
+}
+
+body.be
+{
+    background:none;
+}
+
+#container{width:960px; margin: 10px auto; border:solid 1px #f1d11c; background-color:#f1d11c;}
+#header{height:215px; background:transparent url('/images/layout/header.jpg') no-repeat scroll 0 0; position:relative; /*border-bottom: 1px solid #5E121C;*/}
+#header a{display:block; height:150px;}
+#footer{height:164px; background:transparent url(/images/layout/footer.jpg) no-repeat scroll 0 0; position:relative; clear:left;}
+#credits{position:absolute; bottom:10px; text-align:center; width:100%; color:#f1d11c;}
+
+#history{padding:7px 20px;}
+#history a{color:#5e121c;text-decoration:none;}
+#history a:hover{text-decoration:underline;}
+
+
+h1{font-size:21px;line-height:1.2em;font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;border-bottom:1px solid #5E121C; padding:0 0 5px 0;}
+h1 a,h1 a:hover {color:#5E121C;text-decoration:none;}
+h2{font-size:16px;line-height:1.2em;font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman; text-transform:uppercase;}
+
+.left p{line-height:1.5em;}
+
+.separator{height:20px; width:100%; background:transparent url('/images/layout/proiettili_little.png') repeat scroll 0 0;}
+a.mail, a.mail:hover{color:#f1d11c;}
+
+/* UC */
+ul.appuntamenti li{margin-bottom:10px; clear:both;}
+ul.appuntamenti li h2{background: transparent url('/images/stemmi/bomba_20.png') no-repeat; padding:0 0 0 25px; line-height:20px;margin:5px 0;}
+ul.appuntamenti .fl img{margin:0 10px 10px 0;}
+ul.appuntamenti .fr img{margin:0 0 10px 10px;}
+
+
+.pagfoto{clear:both;text-align: center;}
+.pagfoto ul{padding:10px;}
+.pagfoto ul li {display:inline;margin:5px;background-color: #5e121c;padding: 5px 5px;border-radius: 5px;}
+.pagfoto ul li{-webkit-border-radius:5px;}
+.pagfoto ul li a, .pagfoto ul li a:hover {text-decoration:none; color:#5e121c; font-weight:bold;}
+.pagfoto ul li a{color:#f1d11c;  display: inline-block;height: 15px;width: 25px;font-style: normal;}
+.pagfoto ul .sel a{text-decoration:underline;}
+
+/* Clearfix bug */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+.clearfix { display: block; }
