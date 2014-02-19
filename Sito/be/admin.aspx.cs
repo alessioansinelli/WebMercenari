@@ -9,6 +9,5 @@ public partial class be_admin : CheckLoginPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string s = "";
     }
 }

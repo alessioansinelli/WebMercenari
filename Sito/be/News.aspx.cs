@@ -62,4 +62,20 @@ public partial class be_news : CheckLoginPage
             grdNews.DataBind();
         }
     }
+
+    protected void CheckBox_CheckedChanged(object sender, EventArgs e)
+    {
+        CheckBox Homepage;
+        Homepage = (CheckBox)sender;
+
+        // We can find the row we clicked the checkbox in by walking up the control tree
+        GridViewRow selectedRow = (GridViewRow)Homepage.Parent.Parent;
+        int newsId = (int)grdNews.DataKeys[selectedRow.DataItemIndex].Value;
+
+        Notizie oNot = new Notizie(TipoOggetto.News);
+        oNot.SetHomePage(newsId, Homepage.Checked);
+        oNot = null;
+
+        PopolaGridNews();
+    }
 }

@@ -17,12 +17,11 @@
 </asp:Content>
 
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
-    <form id="form1" runat="server">
     <div class="link">
         <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>        
         <div class="grid_8">
             <h1>Carnevale</h1>
-            <ul class="link">
+            <ul class="link linkpage">
                 <li>
                     <a href="http://www.carnevalediivrea.it/" title="Sito Ufficiale Storico Carnevale di Ivrea" target="_blank">
                     <img src="images/link/carnevale.png" alt="Storico Carnevale di Ivrea" /></a>
@@ -71,7 +70,7 @@
                 </li>
             </ul>
             <h1>Amici</h1>
-            <ul class="link">
+            <ul class="link linkpage">
                 <li>
                     <a href="http://www.ivrearugby.it/" title="Ivrea Rugby Club" target="_blank">
                     <img src="images/link/ivrearugby.png" alt="Ivrea Rugby Club" /></a>
@@ -95,5 +94,4 @@
             
         </div>        
     </div>
-</form>
 </asp:Content>

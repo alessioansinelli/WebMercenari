@@ -11,6 +11,11 @@
     DataKeyNames="ID" onrowcommand="RowCommand">
     <Columns>
         <asp:BoundField DataField="ID" HeaderText="ID" />
+        <asp:TemplateField HeaderText="Homepage" ShowHeader="true" ItemStyle-HorizontalAlign="Center">
+            <ItemTemplate>
+                <asp:CheckBox runat="server" ID="HomePage" Checked='<%# Eval("isHomeNews") %>' AutoPostback="true" OnCheckedChanged="CheckBox_CheckedChanged" />
+            </ItemTemplate>
+        </asp:TemplateField>
         <asp:ButtonField ButtonType="Link" CommandName="up" HeaderText="Su" ShowHeader="True" Text="Su" ItemStyle-HorizontalAlign="Center" >
             <ItemStyle HorizontalAlign="Center"></ItemStyle>
         </asp:ButtonField>

@@ -4,6 +4,6 @@
 a, a:hover {text-decoration:none; color:#5e121c; font-weight:bold;font-style:italic;}
 
 
-ul.link{padding-top:10px;}
-ul.link li{display:inline; float:left; height:200px; width:310px;}
-ul.link a img{border:none;}
+ul.linkpage{padding-top:10px;}
+ul.linkpage li{display:inline; float:left; height:200px; width:310px;}
+ul.linkpage a img{border:none;}

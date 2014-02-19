@@ -26,6 +26,7 @@ public partial class be_default : System.Web.UI.Page
 				{
 					try { Response.Redirect("admin.aspx"); }
 					catch (System.Threading.ThreadAbortException ex) {
+                        
                     }
 				}
 

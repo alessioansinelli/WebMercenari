@@ -18,6 +18,7 @@ public class OggettoBase
     private DateTime _DataModifica;
     private int _IdUtente;
     private TipoOggetto _TipoOggetto;
+    private bool _isHomeNews = false;
     /* Specifiche per documenti e photo */
     private string _PathOggetto = "";
     private string _NomeFileOggetto = "";
@@ -102,17 +103,24 @@ public class OggettoBase
         set { _NumOrder = value; }
     }
 
-		public virtual void FromDataReader(IDataReader oDr ) {
-			this.ID = int.Parse(oDr["tObjectID"].ToString());
-			this.Titolo = oDr["tObjectTitolo"].ToString();
-            this.Testo = oDr["tObjectTesto"].ToString();
-			this.SottoTitolo = oDr["tObjectSottoTitolo"].ToString();
-			this.DataInserimento = DateTime.Parse(oDr["tObjectDataInserimento"].ToString());
-			this.DataModifica = DateTime.Parse(oDr["tObjectDataModifica"].ToString());
-			this.IdUtente = int.Parse(oDr["tObjectIDUtente"].ToString());
-			this.TipoOggetto = (TipoOggetto) int.Parse(oDr["tObjectIDUtente"].ToString());
-            this.NumOrder = int.Parse(oDr["tObjectNumOrder"].ToString());
-		}
+	public virtual void FromDataReader(IDataReader oDr ) {
+		this.ID = int.Parse(oDr["tObjectID"].ToString());
+		this.Titolo = oDr["tObjectTitolo"].ToString();
+        this.Testo = oDr["tObjectTesto"].ToString();
+		this.SottoTitolo = oDr["tObjectSottoTitolo"].ToString();
+		this.DataInserimento = DateTime.Parse(oDr["tObjectDataInserimento"].ToString());
+		this.DataModifica = DateTime.Parse(oDr["tObjectDataModifica"].ToString());
+		this.IdUtente = int.Parse(oDr["tObjectIDUtente"].ToString());
+		this.TipoOggetto = (TipoOggetto) int.Parse(oDr["tObjectIDUtente"].ToString());
+        this.NumOrder = int.Parse(oDr["tObjectNumOrder"].ToString());
+        bool.TryParse(oDr["isHomeNews"].ToString(), out _isHomeNews);
+	}
+
+    public bool isHomeNews
+    {
+        get { return _isHomeNews; }
+        set { _isHomeNews = value; }
+    }
 
 }
 

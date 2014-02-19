@@ -14,16 +14,22 @@ public class Notizie
 {
 
     private TipoOggetto[] _TipoOggetto;
+    private bool HomePage = false;
     //private OleDbConnection _Connessione;
     //private OleDbCommand _Command;
 
     private DataLayer DAL = new DataLayer();
 
     string sSQL = "";
-    public Notizie(TipoOggetto[] TipoOggetto)
+    public Notizie(TipoOggetto[] TipoObj)
     {
         //_Connessione = Business.ConstWrapper.Connessione;
-        _TipoOggetto = TipoOggetto;
+        _TipoOggetto = TipoObj;
+        if (_TipoOggetto.Length == 1 && _TipoOggetto[0] == TipoOggetto.Homepage)
+        {
+            HomePage = true;
+            _TipoOggetto[0] = TipoOggetto.News;
+        }
     }
 
     public Notizie(TipoOggetto _oTipOggetto)
@@ -110,17 +116,23 @@ public class Notizie
 
         IDbCommand dbC = DAL.CreateCommand();
 
-        if (Count > 0)
+        if (Count > 0 && HomePage == false)
         {
             dbC.CommandText = (sqlGetCountObject.Replace("{count}", Count.ToString()).Replace("{@TipoOggetto}", sTipoOggetto).Replace("{sOrderBy}", sOrderBy));
         }
-        else
+        else if (HomePage == false)
         {
             dbC.CommandText = (sqlGetAllObject.Replace("{@TipoOggetto}", sTipoOggetto).Replace("{sOrderBy}", sOrderBy));
+        }
+        else
+        {
+            dbC.CommandText = (sqlGetHomePageObject.Replace("{@TipoOggetto}", sTipoOggetto).Replace("{sOrderBy}", sOrderBy));
         }
 
 
         dbC.Parameters.Add(DAL.CreatePar("@TipoOggetto", sTipoOggetto));
+        dbC.Parameters.Add(DAL.CreatePar("@isHomePage", HomePage));
+
 
         using (IDataReader oDr = DAL.GetDataReader(dbC))
         {
@@ -307,6 +319,18 @@ public class Notizie
         return iRet;
     }
 
+    public int SetHomePage(int ID, bool HomeNews)
+    {
+        IDbCommand dbC = DAL.CreateCommand();
+        dbC.CommandText = "UPDATE tObject set isHomeNews=@isHomeNews where tObjectID=@Id;";
+        dbC.CommandText += "UPDATE tObject set isHomeNews=0 where tObjectID <> @Id;";
+        dbC.Parameters.Add(DAL.CreatePar("@isHomeNews", HomeNews));
+        dbC.Parameters.Add(DAL.CreatePar("@Id", ID));
+
+        return DAL.Execute(dbC);
+
+    }
+
 
     private const string sqlGetSingleObject = "SELECT * " +
         "FROM tObject " +
@@ -315,6 +339,10 @@ public class Notizie
     private const string sqlGetAllObject = "SELECT * " +
         "FROM tObject " +
         "WHERE tObject.tObjectTypeID in ({@TipoOggetto}) {sOrderBy}";
+
+    private const string sqlGetHomePageObject = "SELECT * " +
+    "FROM tObject " +
+    "WHERE tObject.tObjectTypeID in ({@TipoOggetto}) and [isHomeNews]=@isHomePage {sOrderBy}";
 
     private const string sqlGetCountObject = "SELECT TOP {count} * " +
         "FROM tObject " +
