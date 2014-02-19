@@ -25,7 +25,9 @@ public partial class _default : System.Web.UI.Page
 			TitoloHomePage = oOggetti[0].Titolo;
 			SottoTitoloHomePage = oOggetti[0].SottoTitolo;
 			TestoHomePage = oOggetti[0].Testo;
-			ImmagineHomePage = ResolveUrl(Business.ConstWrapper.CartellaFoto + oOggetti[0].Foto[0].Percorso + "w6" + oOggetti[0].Foto[0].Estensione);
+            if (oOggetti[0].Foto[0] != null) { 
+			    ImmagineHomePage = ResolveUrl(Business.ConstWrapper.CartellaFoto + oOggetti[0].Foto[0].Percorso + "w6" + oOggetti[0].Foto[0].Estensione);
+            }
 		}
 
 		oOggetti = new List<Oggetti.Oggetto>();

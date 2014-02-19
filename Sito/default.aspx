@@ -18,12 +18,16 @@
         <div class="grid_6">
             <h1><% = TitoloHomePage %></h1>
             <p class="pnewshome"><% = SottoTitoloHomePage %></p>
-            <img src="<% = ImmagineHomePage %>" alt="<% = TitoloHomePage %>" />
+            <% if (ImmagineHomePage != "")
+               {  %>
+                <img src="<% = ImmagineHomePage %>" alt="<% = TitoloHomePage %>" />
+            <% } %>
             <div class="pnewshome"><% = TestoHomePage%></div>
 
             <!-- Twitter -->
             <a class="twitter-timeline" data-dnt=true href="https://twitter.com/MercenariArance" data-widget-id="283918125215399936">Tweets di @MercenariArance</a>
-            <script>                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+            <script type="text/javascript">
+                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
             </script>
         </div>
         <div class="grid_4">

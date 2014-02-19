@@ -13,6 +13,9 @@ namespace ImageSender
 {
 	public partial class Form1 : Form
 	{
+
+        private string LblProgText = "{0} di {1} immagini caricate";
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -23,6 +26,23 @@ namespace ImageSender
 			if (selectFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
 			{
 				txtFolderImmagini.Text = selectFolder.SelectedPath;
+
+                /* fill imagelist to charge */                
+                string[] fileList = Directory.GetFiles(selectFolder.SelectedPath, "*.jpg");
+
+                if (fileList.Length > 0)
+                {
+                    dgvFileList.Rows.Clear();
+                    dgvFileList.Columns.Add("Image", "Immagine");
+
+                    foreach (string s in fileList)
+                    {
+                        dgvFileList.Rows.Add(s.Substring(s.LastIndexOf("\\")));
+                    }
+
+                }
+
+
 			};
 		}
 
@@ -53,7 +73,7 @@ namespace ImageSender
 						MercenariUpdater.BeService srv = new MercenariUpdater.BeService();
 
 						int iCount = 0;
-						iCount = fileList.Length;
+						int iTotal = fileList.Length;
 						progressBar1.Maximum = fileList.Length;
 
 						foreach (string s in fileList)
@@ -67,6 +87,8 @@ namespace ImageSender
 							srv.SaveImage(fname, oImage, IDGallery);
 
 							progressBar1.Increment(1);
+                            iCount++;
+                            lblProgression.Text = string.Format(LblProgText, iCount, iTotal);
 
 							Application.DoEvents();
 
@@ -106,5 +128,10 @@ namespace ImageSender
 				txtID.Text = selInt;
 			//}
 		}
+
+        private void LoadSender(object sender, EventArgs e)
+        {
+            lblProgression.Text = "";
+        }
 	}
 }

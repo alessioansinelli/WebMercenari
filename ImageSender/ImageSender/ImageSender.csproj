@@ -100,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://localhost:15419/BeService.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
+      <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\MercenariUpdater\</RelPath>
       <UpdateFromURL>http://localhost:15419/BeService.asmx</UpdateFromURL>
       <ServiceLocationURL>
