@@ -54,7 +54,7 @@ public class BeService : System.Web.Services.WebService {
 				catch { newId = 1; }
 
 				Oggetti.OggettoFoto oFoto = new Oggetti.OggettoFoto();
-				oFoto.Titolo = FileName.Substring(FileName.LastIndexOf(".")).Trim();
+				oFoto.Titolo = FileName.Substring(0, FileName.LastIndexOf(".") + 1).Trim();
 				oFoto.SottoTitolo = "";
 				oFoto.DataInserimento = DateTime.Now;
 				oFoto.ID = newId;

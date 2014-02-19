@@ -36,6 +36,7 @@ body
 	font-size:12px;
 	line-height:1.2em;
 	color:#5e121c;
+	background-size: cover;
 }
 
 body.be
@@ -54,7 +55,7 @@ body.be
 #history a:hover{text-decoration:underline;}
 
 
-h1{font-size:21px;line-height:1.2em;font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;border-bottom:1px solid #5E121C; padding:0 0 5px 0;}
+h1{font-size: 1.8em;line-height:1.2em;font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;border-bottom:1px solid #5E121C; padding:0 0 5px 0;}
 h1 a,h1 a:hover {color:#5E121C;text-decoration:none;}
 h2{font-size:16px;line-height:1.2em;font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman; text-transform:uppercase;}
 
@@ -72,10 +73,10 @@ ul.appuntamenti .fr img{margin:0 0 10px 10px;}
 
 .pagfoto{clear:both;text-align: center;}
 .pagfoto ul{padding:10px;}
-.pagfoto ul li {display:inline;margin:5px;background-color: #5e121c;padding: 5px 5px;border-radius: 5px;}
-.pagfoto ul li{-webkit-border-radius:5px;}
-.pagfoto ul li a, .pagfoto ul li a:hover {text-decoration:none; color:#5e121c; font-weight:bold;}
-.pagfoto ul li a{color:#f1d11c;  display: inline-block;height: 15px;width: 25px;font-style: normal;}
+.pagfoto ul li {display:inline;background-color: #5e121c;border-radius: 5px; -webkit-border-radius:5px;border: 1px solid #5E121C;}
+.pagfoto ul li:hover {display:inline;margin:5px;background-color: #f1d11c;padding: 5px 5px;border-radius: 5px; -webkit-border-radius:5px;border: 1px solid #5E121C;}
+.pagfoto ul li a{color:#f1d11c;  display: inline-block;height: 15px;width: 25px;font-style: normal;text-decoration: none;}
+.pagfoto ul li:hover a, .pagfoto ul li a:hover {text-decoration:none; color:#5e121c; font-weight:bold;}
 .pagfoto ul .sel a{text-decoration:underline;}
 
 /* Clearfix bug */

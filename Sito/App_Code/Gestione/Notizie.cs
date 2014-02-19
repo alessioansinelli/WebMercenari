@@ -216,6 +216,7 @@ public class Notizie
         IDbCommand dbC = DAL.CreateCommand();
 
         dbC.CommandText = sqlDeleteSingleObject;
+				dbC.CommandType = CommandType.StoredProcedure;
         dbC.Parameters.Add(DAL.CreatePar("@tObjectID", IdNotizia));
 
 
@@ -332,6 +333,6 @@ public class Notizie
         " GROUP BY tObject.tObjectTypeID" +
         " HAVING (tObject.tObjectTypeID = @tObjectTypeID);";
 
-    private const string sqlDeleteSingleObject = "DELETE FROM tObject where tObjectID=@tObjectID";
+		private const string sqlDeleteSingleObject = "deleteSingleObject";
 
 }
