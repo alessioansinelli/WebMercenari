@@ -84,7 +84,7 @@ namespace ImageSender
 							byte[] oImage = File.ReadAllBytes(s);
 
 							//srv.SaveImage(fname, oImage);
-							srv.SaveImage(fname, oImage, IDGallery);
+							srv.SaveImage(fname, oImage, IDGallery, "alessio", "molotov81");
 
 							progressBar1.Increment(1);
                             iCount++;

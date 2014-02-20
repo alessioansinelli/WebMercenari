@@ -40,7 +40,7 @@
 			<li class="clearfix">
 				<h2><%# DataBinder.Eval(Container.DataItem, "Titolo")%></h2>
 				<%# getUrlPhoto(((Oggetti.Oggetto)Container.DataItem).Foto, "w2") %>
-				<div><%# ((Oggetti.Oggetto)Container.DataItem).DataInserimento.ToString("dd MMM yyyy", new System.Globalization.CultureInfo("it-IT")) %> - <%# DataBinder.Eval(Container.DataItem, "SottoTitolo")%></div>				
+				<div><%# DataBinder.Eval(Container.DataItem, "SottoTitolo")%></div>				
 				<div class="leggitutto"><a href="dettaglionews.aspx?id=<%# DataBinder.Eval(Container.DataItem, "ID")%>">Leggi tutto &raquo;</a></div>
             </li>
 			</ItemTemplate>

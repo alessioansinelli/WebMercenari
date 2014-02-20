@@ -42,38 +42,46 @@ public class BeService : System.Web.Services.WebService {
 
 
 		[WebMethod]
-		public bool SaveImage(string FileName, byte[] oImage, int GalleryID)
+		public bool SaveImage(string FileName, byte[] oImage, int GalleryID, string NomeUtente, string Password)
 		{
 
-			if (oImage != null)
+			if (AutOK(NomeUtente, Password))
 			{
 
-				Immagini oImmagini = new Immagini();
-				int newId = 0;
-				try { newId = oImmagini.GetNewID(); }
-				catch { newId = 1; }
+				if (oImage != null)
+				{
 
-				Oggetti.OggettoFoto oFoto = new Oggetti.OggettoFoto();
-				oFoto.Titolo = FileName.Substring(0, FileName.LastIndexOf(".") + 1).Trim();
-				oFoto.SottoTitolo = "";
-				oFoto.DataInserimento = DateTime.Now;
-				oFoto.ID = newId;
-				oFoto.ParentObjectID = GalleryID;
-				oFoto.NumOrder = 1;
-				string outPercorso = "";
-				string outEstensione = "";
+					Immagini oImmagini = new Immagini();
+					int newId = 0;
+					try { newId = oImmagini.GetNewID(); }
+					catch { newId = 1; }
+
+					Oggetti.OggettoFoto oFoto = new Oggetti.OggettoFoto();
+					oFoto.Titolo = FileName.Substring(0, FileName.LastIndexOf(".") + 1).Trim();
+					oFoto.SottoTitolo = "";
+					oFoto.DataInserimento = DateTime.Now;
+					oFoto.ID = newId;
+					oFoto.ParentObjectID = GalleryID;
+					oFoto.NumOrder = 1;
+					string outPercorso = "";
+					string outEstensione = "";
 
 
-				oImmagini.SalvaImmaginePost(oImage, FileName, oFoto, newId, out outPercorso, out outEstensione);
+					oImmagini.SalvaImmaginePost(oImage, FileName, oFoto, newId, out outPercorso, out outEstensione);
 
-				oFoto.Estensione = outEstensione;
-				oFoto.Percorso = outPercorso;
+					oFoto.Estensione = outEstensione;
+					oFoto.Percorso = outPercorso;
 
-				oImmagini.Add(oFoto);
+					oImmagini.Add(oFoto);
 
+				}
+
+				return true;
 			}
-
-			return true;
+			else
+			{
+				return false;
+			}
 		}
 
     private bool AutOK(string NomeUtente, string Password) {

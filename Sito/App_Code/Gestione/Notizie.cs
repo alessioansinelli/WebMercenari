@@ -56,13 +56,13 @@ public class Notizie
             }
         }
 
-        sSQL = sqlGetSingleObject.Replace("{@TipoOggetto}", sTipoOggetto);
+        sSQL = sqlGetSingleObject;
         
         IDbCommand dbC = DAL.CreateCommand();
         dbC.CommandText = sSQL;
+				dbC.CommandType = CommandType.StoredProcedure;
 
-
-        dbC.Parameters.Add(DAL.CreatePar("IdObject", iNotizia));
+        dbC.Parameters.Add(DAL.CreatePar("@objectID", iNotizia));
 
 
         IDataReader oDr = DAL.GetDataReader(dbC);
@@ -149,6 +149,63 @@ public class Notizie
 
         return oList;
     }
+
+		public List<Oggetto> GetHomePage(int Count, bool isHomePage)
+		{
+
+			List<Oggetto> oList = new List<Oggetto>();
+
+			string sTipoOggetto = "";
+			string sOrderBy = "";
+			for (int iT = 0; iT < _TipoOggetto.Length; iT++)
+			{
+				sTipoOggetto += ((int)_TipoOggetto[iT]).ToString();
+				if (iT < _TipoOggetto.Length - 1)
+				{
+					sTipoOggetto += ", ";
+				}
+
+			}
+
+			if (_TipoOggetto.Length > 1)
+			{
+				sOrderBy += " order by tObjectDataInserimento desc, tObjectNumOrder ";
+			}
+			else
+			{
+				sOrderBy += " order by tObjectNumOrder";
+			}
+
+			IDbCommand dbC = DAL.CreateCommand();
+
+			if (Count > 0)
+			{
+				dbC.CommandText = (sqlGetHomePageObject.Replace("{count}", Count.ToString()).Replace("{@TipoOggetto}", sTipoOggetto).Replace("{sOrderBy}", sOrderBy));				
+			}
+
+			dbC.Parameters.Add(DAL.CreatePar("@TipoOggetto", sTipoOggetto));
+			dbC.Parameters.Add(DAL.CreatePar("@isHomePage", isHomePage));
+
+
+			using (IDataReader oDr = DAL.GetDataReader(dbC))
+			{
+
+				while (oDr.Read())
+				{
+					Oggetto oNotizia = new Oggetto();
+					oNotizia.FromDataReader(oDr);
+					oList.Add(oNotizia);
+				}
+				oDr.Close();
+			}
+
+			foreach (Oggetto oObj in oList)
+			{
+				oObj.Foto = new Immagini().GetAll(oObj.ID, 1).ToArray();
+			}
+
+			return oList;
+		}
 
     public List<Oggetto> GetAll(int Count, bool GetImage, int CountImage)
     {
@@ -332,15 +389,15 @@ public class Notizie
     }
 
 
-    private const string sqlGetSingleObject = "SELECT * " +
+		private const string sqlGetSingleObject = "selectSingleObject";/*"SELECT * " +
         "FROM tObject " +
-        "WHERE tObjectID=@IdObject";//and tObject.tObjectTypeID in ({@TipoOggetto});
+        "WHERE tObjectID=@IdObject";//and tObject.tObjectTypeID in ({@TipoOggetto});*/
 
     private const string sqlGetAllObject = "SELECT * " +
         "FROM tObject " +
         "WHERE tObject.tObjectTypeID in ({@TipoOggetto}) {sOrderBy}";
 
-    private const string sqlGetHomePageObject = "SELECT * " +
+    private const string sqlGetHomePageObject = "SELECT TOP {count} * " +
     "FROM tObject " +
     "WHERE tObject.tObjectTypeID in ({@TipoOggetto}) and [isHomeNews]=@isHomePage {sOrderBy}";
 

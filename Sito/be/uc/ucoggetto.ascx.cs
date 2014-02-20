@@ -39,12 +39,9 @@ public partial class be_uc_ucoggetto : System.Web.UI.UserControl
         if (!Page.IsPostBack)
         {
             if (IdNews != 0)
-            {
-                TipoOggetto[] oTipoOggetto = new TipoOggetto[1];
-                oTipoOggetto[0] = TipoOggetto;
-                Oggetti.Oggetto oNotizia = new Notizie(oTipoOggetto).Get(IdNews);
+            {                
+                Oggetti.Oggetto oNotizia = new Notizie(TipoOggetto).Get(IdNews);
                 Popolanotizia(oNotizia);
-
             }
         }
 
@@ -63,10 +60,7 @@ public partial class be_uc_ucoggetto : System.Web.UI.UserControl
         if (txtTitolo.Text != "")
         {
 
-            TipoOggetto[] oTipoOggetto = new TipoOggetto[1];
-            oTipoOggetto[0] = _TipoOggetto;
-
-            Notizie oNotizie = new Notizie(oTipoOggetto[0]);
+						Notizie oNotizie = new Notizie(_TipoOggetto);
             Oggetti.Oggetto oNotizia = new Oggetti.Oggetto();
 
             if (IdNews != 0)

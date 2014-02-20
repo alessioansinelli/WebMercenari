@@ -25,7 +25,7 @@ public partial class _default : System.Web.UI.Page
 			TitoloHomePage = oOggetti[0].Titolo;
 			SottoTitoloHomePage = oOggetti[0].SottoTitolo;
 			TestoHomePage = oOggetti[0].Testo;
-            if (oOggetti[0].Foto[0] != null) { 
+            if (oOggetti[0].Foto != null) { 
 			    ImmagineHomePage = ResolveUrl(Business.ConstWrapper.CartellaFoto + oOggetti[0].Foto[0].Percorso + "w6" + oOggetti[0].Foto[0].Estensione);
             }
 		}
@@ -68,11 +68,9 @@ public partial class _default : System.Web.UI.Page
                 return (List<Oggetti.Oggetto>)HttpContext.Current.Cache["NotiziaCentraleHomePage"];
             }
             else {
-                TipoOggetto[] OtipoOggetto = new TipoOggetto[1];
-                OtipoOggetto[0] = TipoOggetto.Homepage;
-                Notizie oNotizie = new Notizie(OtipoOggetto);
+								Notizie oNotizie = new Notizie(TipoOggetto.News);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
-                oOggetti = oNotizie.GetAll(1, true,1);
+                oOggetti = oNotizie.GetHomePage(1, true);
                 NotiziaCentraleHomePage = oOggetti;
                 return oOggetti;
             }
@@ -90,13 +88,9 @@ public partial class _default : System.Web.UI.Page
             }
             else
             {
-                TipoOggetto[] OtipoOggetto = new TipoOggetto[2];
-                OtipoOggetto[0] = TipoOggetto.Eventi;
-                OtipoOggetto[1] = TipoOggetto.News;
-
-                Notizie oNotizie = new Notizie(OtipoOggetto);
+								Notizie oNotizie = new Notizie(TipoOggetto.News);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
-                oOggetti = oNotizie.GetAll(5, true,1);
+                oOggetti = oNotizie.GetHomePage(5, false);
                 NotiziePrimoPiano = oOggetti;
                 return oOggetti;
             }
@@ -113,10 +107,8 @@ public partial class _default : System.Web.UI.Page
                 return (List<Oggetti.Oggetto>)HttpContext.Current.Cache["Photogallery"];
             }
             else
-            {
-                TipoOggetto[] OtipoOggetto = new TipoOggetto[1];
-                OtipoOggetto[0] = TipoOggetto.Photogallery;
-                Notizie oNotizie = new Notizie(OtipoOggetto);
+            {                
+								Notizie oNotizie = new Notizie(TipoOggetto.Photogallery);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
                 oOggetti = oNotizie.GetAll(5, true,1);
                 Photogallery = oOggetti;
@@ -136,9 +128,7 @@ public partial class _default : System.Web.UI.Page
             }
             else
             {
-                TipoOggetto[] OtipoOggetto = new TipoOggetto[1];
-                OtipoOggetto[0] = TipoOggetto.Eventi;
-                Notizie oNotizie = new Notizie(OtipoOggetto);
+								Notizie oNotizie = new Notizie(TipoOggetto.Eventi);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
                 oOggetti = oNotizie.GetAll(3, true, 1);
                 Eventi = oOggetti;
