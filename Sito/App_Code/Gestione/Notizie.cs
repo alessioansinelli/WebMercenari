@@ -201,7 +201,7 @@ public class Notizie
 
 			foreach (Oggetto oObj in oList)
 			{
-				oObj.Foto = new Immagini().GetAll(oObj.ID, 1).ToArray();
+			  oObj.Foto = new Immagini().GetAll(oObj.ID, 0).ToArray();
 			}
 
 			return oList;
@@ -418,6 +418,6 @@ public class Notizie
         " GROUP BY tObject.tObjectTypeID" +
         " HAVING (tObject.tObjectTypeID = @tObjectTypeID);";
 
-		private const string sqlDeleteSingleObject = "deleteSingleObject";
+		private const string sqlDeleteSingleObject = "deleteSingleObject"; /* stored procedure */
 
 }

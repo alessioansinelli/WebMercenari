@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Photogallery.ascx.cs"
     Inherits="uc_Photogallery" %>
+		<% if (ShowOnlyPhoto != true){%>
     <% if (TipoOggetto != TipoOggetto.News)
        { %>
     <h1><% = _TitoloGallery %></h1>
@@ -16,7 +17,9 @@
        else if (Galleria.Foto.Length > 0)
        { %>
        <h2>Immagini Collegate</h2> 
-     <% } %>
+     <% }
+		 }
+		 %>
 <asp:Repeater ID="repFoto" runat="server">
     <HeaderTemplate>
         <div class="gallery Collage">
@@ -24,9 +27,9 @@
     <ItemTemplate>
        
             <div class="Image_Wrapper photodiv" data-caption="<%# DataBinder.Eval(Container.DataItem, "Titolo")%>">
-                <a href="<%# Utility.getPathPhoto((Oggetti.OggettoFoto)(Container.DataItem), "w9") %>" class="photo" title="<%# DataBinder.Eval(Container.DataItem, "Titolo")%>">
+                <a href="<%# Utility.getPathPhoto((Oggetti.OggettoFoto)(Container.DataItem), "w12") %>" class="photo" title="<%# DataBinder.Eval(Container.DataItem, "Titolo")%>">
                     <%# Utility.getUrlPhoto((Oggetti.OggettoFoto)(Container.DataItem), "w3") %></a>
-                </div>
+            </div>
     </ItemTemplate>
     
     <FooterTemplate>

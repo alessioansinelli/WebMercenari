@@ -2,6 +2,8 @@
 
 <%@ Register src="uc/menu.ascx" tagname="menu" tagprefix="uc1" %>
 
+<%@ Register src="uc/Photogallery.ascx" tagname="Photogallery" tagprefix="uc2" %>
+
 <%-- Aggiungere qui i controlli del contenuto --%>
 <asp:Content ID="menu" runat="server" ContentPlaceHolderID="menu">
 	<uc1:menu ID="menu1" runat="server" />
@@ -14,6 +16,7 @@
 </asp:Content>
 
 <asp:Content ID="divcontenuto" runat="server" ContentPlaceHolderID="content">
+    <form id="form1" runat="server">
     <div class="homepage newshome">
         <div class="grid_6">
             <h1><% = TitoloHomePage %></h1>
@@ -22,6 +25,7 @@
                {  %>
                 <img src="<% = ImmagineHomePage %>" alt="<% = TitoloHomePage %>" />
             <% } %>
+
             <div class="pnewshome"><% = TestoHomePage%></div>
 
             <!-- Twitter -->
@@ -106,4 +110,5 @@
 
         </div>
     </div>
+		</form>
 </asp:Content>

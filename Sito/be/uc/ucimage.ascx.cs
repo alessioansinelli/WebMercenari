@@ -35,7 +35,7 @@ public partial class be_uc_ucimage : System.Web.UI.UserControl
         {
 
             //Immagini oImmagini = new Immagini();
-            oImmagini.UpdateNumOrder(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()), "UP");
+					oImmagini.UpdateNumOrder(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()), "UP", _ObjectID);
 
             oImmagini = null;
 
@@ -43,13 +43,13 @@ public partial class be_uc_ucimage : System.Web.UI.UserControl
         else if (e.CommandName == "down")
         {
             //Immagini oImmagini = new Immagini();
-            oImmagini.UpdateNumOrder(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()), "DOWN");
+					oImmagini.UpdateNumOrder(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()), "DOWN", _ObjectID);
 
             oImmagini = null;
         }
         else if (e.CommandName == "elimina")
         {
-            oImmagini.Delete(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()));
+					oImmagini.Delete(int.Parse(grdImmagini.DataKeys[int.Parse(e.CommandArgument.ToString())].Value.ToString()), _ObjectID);
         }
 
 

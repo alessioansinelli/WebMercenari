@@ -33,3 +33,13 @@
     </div>
     </form>
 </asp:Content>
+
+<asp:Content ID="scriptBottom" ContentPlaceHolderID="addScript" runat="server">
+    <script language="javascript" type="text/javascript">
+    	$(function () { $('.photo').lightBox(); });
+
+    	$('.Collage').removeWhitespace().collagePlus({ 'targetHeight': 200 });
+    	$('.Collage').show();
+
+    </script>
+</asp:Content>

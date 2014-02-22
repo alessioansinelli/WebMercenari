@@ -36,4 +36,5 @@ public partial class _photogallery : System.Web.UI.Page
         }
         set { HttpContext.Current.Cache["ElencoPhotogallery"] = value; }
     }
+	
 }

@@ -38,30 +38,39 @@ public class Immagini
         return IdImmagine;
     }
 
-    public bool Delete(int idfoto)
+		/* Delete photo reference */
+    public bool Delete(int idfoto, int parentObjectID)
     {
         bool bret = false;
 
-        Oggetti.OggettoFoto oFoto = this.Get(idfoto);
+				Oggetti.OggettoFoto oFoto = this.Get(idfoto, parentObjectID);
 
-
-
+				/* delete from tImage */
         dbC = DAL.CreateCommand();
         dbC.CommandText = (sqlDeleteSingleObject);
-        dbC.Parameters.Add(DAL.CreatePar("@tImageID", oFoto.ID));
+        dbC.Parameters.Add(DAL.CreatePar("@tImageID", idfoto));
 
         bret = (DAL.Execute(dbC) > 0);
 
-        // DELETE IMAGE FROM FILE SYSTEM
-        this.DeleteFromFileSystem(oFoto);
+				/* Delete from tRelatedItem */
+				dbC = DAL.CreateCommand();
+				dbC.CommandText = (sqlDeleteFromRelated);
+				dbC.Parameters.Add(DAL.CreatePar("@tImageID", idfoto));
+				dbC.Parameters.Add(DAL.CreatePar("@tObjectParentId", parentObjectID));
 
+				bret = DAL.Execute(dbC) > 0;
+        
         // UPDATE NEW ORDER
         dbC = DAL.CreateCommand();
-        dbC.CommandText = ("UPDATE tImage SET tImageNumOrder = tImageNumOrder-1 " +
-                " WHERE tImageNumOrder > @NumOrder AND tObjectID=@tImageParentID;");
-
+				dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder-1 where tRelatedItemOrder > @NumOrder AND tObjectId=@tImageParentID and tObjectRelatedType = 1";
+				//dbC.CommandText = ("UPDATE tImage SET tImageNumOrder = tImageNumOrder-1 " +
+				//        " WHERE tImageNumOrder > @NumOrder AND tObjectID=@tImageParentID;");
         dbC.Parameters.Add(DAL.CreatePar("@NumOrder", oFoto.NumOrder));
-        dbC.Parameters.Add(DAL.CreatePar("@tImageParentID", oFoto.ParentObjectID));
+				dbC.Parameters.Add(DAL.CreatePar("@tImageParentID", parentObjectID));
+
+				// check if present related item for other object don't delete it from filesystem	
+				// DELETE IMAGE FROM FILE SYSTEM
+				this.DeleteFromFileSystem(oFoto);
 
         DAL.Execute(dbC);
 
@@ -70,14 +79,6 @@ public class Immagini
 
     private void DeleteFromFileSystem(Oggetti.OggettoFoto oFoto)
     {
-        // impedisce alla sessione di scadere quando si eliminano cartelle da file system
-        //PropertyInfo p = typeof(System.Web.HttpRuntime).GetProperty("FileChangesMonitor", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
-        //object o = p.GetValue(null, null);
-        //FieldInfo f = o.GetType().GetField("_dirMonSubdirs", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.IgnoreCase);
-        //object monitor = f.GetValue(o);
-        //MethodInfo m = monitor.GetType().GetMethod("StopMonitoring", BindingFlags.Instance | BindingFlags.NonPublic);
-        //m.Invoke(monitor, new object[] { });
-
         string PathFolder = HttpContext.Current.Server.MapPath(Business.ConstWrapper.CartellaFoto + oFoto.Percorso);
         if (System.IO.Directory.Exists(PathFolder))
         {
@@ -100,6 +101,7 @@ public class Immagini
 
         dbC = DAL.CreateCommand();
         dbC.CommandText = (sqlInsertImage);
+				dbC.CommandType = CommandType.StoredProcedure;
 
         //tImageID, tImageTitolo, tImageSottoTitolo, tImagePercorso, tImageEstensione, tImageDataInserimento, tObjectID, tImageNumOrder
         dbC.Parameters.Add(DAL.CreatePar("@tImageID", oFoto.ID));
@@ -114,9 +116,10 @@ public class Immagini
         DAL.Execute(dbC);
 
         dbC = DAL.CreateCommand();
+				dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder+1 where tObjectRelatedId <> " + oFoto.ID.ToString() + " AND tObjectId="+ (int)oFoto.ParentObjectID +" and tObjectRelatedType = 2";
 
-        dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
-                            " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
+				// dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
+				// " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
 
         DAL.Execute(dbC);
 
@@ -281,18 +284,18 @@ public class Immagini
         return retList;
     }
 
-    public bool UpdateNumOrder(int ID, string Direction)
+    public bool UpdateNumOrder(int ID, string Direction, int ParentID)
     {
         bool bRet = false;
 
-        Oggetti.OggettoFoto oFoto = this.Get(ID);
+				Oggetti.OggettoFoto oFoto = this.Get(ID, ParentID);
 
         int CurrentNumOrder = oFoto.NumOrder;
         int MaxNewOrder = GetLastNumOrder(oFoto.ParentObjectID);
 
         dbC = DAL.CreateCommand();
 
-        dbC.CommandText = ("UPDATE tImage set tImageNumOrder=@NewNumOrder where tImageID=@Id");
+				dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId="+oFoto.ParentObjectID);
 
         if ((Direction == "UP") && (CurrentNumOrder != 1))
         {
@@ -303,7 +306,7 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-            dbC.CommandText = "UPDATE tImage set tImageNumOrder=" + CurrentNumOrder + " where tImageID <> " + oFoto.ID + " and tImageNumOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
+						dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
 
 
             DAL.Execute(dbC);
@@ -317,7 +320,7 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-            dbC.CommandText = ("UPDATE tImage set tImageNumOrder=" + CurrentNumOrder + " where tImageID <> " + oFoto.ID + " and tImageNumOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
+						dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
 
             DAL.Execute(dbC);
 
@@ -326,7 +329,7 @@ public class Immagini
         return bRet;
     }
 
-    private Oggetti.OggettoFoto Get(int ID)
+    private Oggetti.OggettoFoto Get(int ID, int ParentID)
     {
         Oggetti.OggettoFoto oFoto = new Oggetti.OggettoFoto();
 
@@ -334,6 +337,7 @@ public class Immagini
 
         dbC.CommandText = (sqlGetFromId);
         dbC.Parameters.Add(DAL.CreatePar("@tImageID", ID));
+				dbC.Parameters.Add(DAL.CreatePar("@tObjectID", ParentID));
 
         using (IDataReader oDr = DAL.GetDataReader(dbC))
         {
@@ -372,30 +376,59 @@ public class Immagini
         return iRet;
     }
 
-    public const string sqlGetLastId = "SELECT Max(tImageID) AS MaxDitImageID " +
-    " FROM tImage ";
+    public const string sqlGetLastId = "SELECT Max(tImageID) AS MaxDitImageID FROM tImage";
 
-    public const string sqlInsertImage = "INSERT INTO tImage (tImageID, tImageTitolo, tImageSottoTitolo, tImagePercorso, tImageEstensione, tImageDataInserimento, tObjectID, tImageNumOrder)" +
-        " VALUES " +
-        " ( @tImageID, @tImageTitolo, @tImageSottoTitolo, @tImagePercorso, @tImageEstensione, @tImageDataInserimento, @tObjectID, @tImageNumOrder ) ";
+		public const string sqlInsertImage = "insertImage"; 
+				/*
+				 *	
+						"INSERT INTO tImage (tImageID, tImageTitolo, tImageSottoTitolo, tImagePercorso, tImageEstensione, tImageDataInserimento, tObjectID, tImageNumOrder)" +
+						" VALUES " +
+						" ( @tImageID, @tImageTitolo, @tImageSottoTitolo, @tImagePercorso, @tImageEstensione, @tImageDataInserimento, @tObjectID, @tImageNumOrder ) ";
+				 * 
+				 */
 
-    private const string sqlGetAllByParentId = "SELECT *" +
-"FROM tImage " +
-"WHERE tObjectID=@tObjectID order by tImageNumOrder;";
+		private const string sqlGetAllByParentId = "SELECT [tImageID] " + 
+      ",[tImageTitolo] " +
+      ",[tImageSottoTitolo] " +
+      ",[tImagePercorso] " +
+      ",[tImageEstensione] " +
+      ",[tImageDataInserimento] " +
+      ",r.tObjectId " +
+      ",r.tRelatedItemOrder as tImageNumOrder " +
+			"FROM [tImage] i  " +
+			"INNER JOIN tRelatedItem r " +
+			"ON r.tObjectRelatedId = i.tImageID where r.tObjectId = @tObjectID order by r.tRelatedItemOrder";
 
-    private const string sqlGetCountByParentId = "SELECT TOP {count} * " +
-"FROM tImage " +
-"WHERE tObjectID=@tObjectID order by tImageNumOrder;";
+		private const string sqlGetCountByParentId = "SELECT TOP {count} [tImageID]" + 
+			",[tImageTitolo] " +
+			",[tImageSottoTitolo] " +
+			",[tImagePercorso] " +
+			",[tImageEstensione] " +
+			",[tImageDataInserimento] " +
+			",r.tObjectId " +
+			",r.tRelatedItemOrder as tImageNumOrder " +
+			"FROM [tImage] i  " +
+			"INNER JOIN tRelatedItem r " +
+			"ON r.tObjectRelatedId = i.tImageID where r.tObjectId = @tObjectID order by r.tRelatedItemOrder";
 
-    private const string sqlGetFromId = "SELECT *" +
-"FROM tImage " +
-"WHERE tImageID=@tImageID";
+    private const string sqlGetFromId = "SELECT [tImageID] " +
+      ",[tImageTitolo] " +
+      ",[tImageSottoTitolo] " +
+      ",[tImagePercorso] " +
+      ",[tImageEstensione] " +
+      ",[tImageDataInserimento] " +
+      ",r.tObjectId " +
+      ",r.tRelatedItemOrder as tImageNumOrder " +
+			"FROM [tImage] i  " +
+			"INNER JOIN tRelatedItem r " +
+			"ON r.tObjectRelatedId = i.tImageID " +
+			"WHERE i.tImageID = @tImageID " +
+			"AND i.tObjectID = @tObjectID";
 
-    private const string sqlGetLastNumOrder = "SELECT Max(tImageNumOrder) AS MaxNumOrder" +
-        " FROM tImage" +
-        " GROUP BY tObjectID" +
-        " HAVING (((tObject.tObjectID)=@tObjectID));";
+		private const string sqlGetLastNumOrder = "select top 1 tRelatedItemOrder from tRelatedItem r where r.tObjectId = @tObjectID and tObjectRelatedType = 2 order by r.tRelatedItemOrder desc";
 
     private const string sqlDeleteSingleObject = "DELETE FROM tImage where tImageID=@tImageID";
+
+		private const string sqlDeleteFromRelated = "delete from tRelatedItem where tObjectRelatedId=@tImageID and tObjectId=@tObjectParentId";
 
 }

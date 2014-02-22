@@ -19,6 +19,7 @@ public partial class uc_Photogallery : System.Web.UI.UserControl
     private string _pageurl = "";
     public string _DataPubblicazione = "";
     public string _ShowShareUrl = "";
+		public bool _ShowOnlyPhoto = false;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -130,5 +131,11 @@ public partial class uc_Photogallery : System.Web.UI.UserControl
         get { return _ShowShareUrl; }
         set { _ShowShareUrl = value; }
     }
+
+		public bool ShowOnlyPhoto
+		{
+			get { return _ShowOnlyPhoto; }
+			set { _ShowOnlyPhoto = value; }
+		}
 
 }
