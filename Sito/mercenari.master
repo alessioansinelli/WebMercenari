@@ -35,6 +35,17 @@
     Histats.track_hits();} catch(err){};
     </script></a>
     <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1377992&101" alt="statistiche sito" border="0"></a></noscript>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21345901-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
     <!-- Histats.com  END  -->
     <!-- Javascript import -->
     <script type="text/javascript" src="/js/jquery.js" language="javascript"></script>
