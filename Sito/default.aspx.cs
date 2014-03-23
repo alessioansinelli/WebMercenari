@@ -8,33 +8,34 @@ using System.Web.UI.WebControls;
 public partial class _default : System.Web.UI.Page
 {
 
-	public string TitoloHomePage = "";
-	public string SottoTitoloHomePage = "";
-	public string TestoHomePage = "";
-	public string ImmagineHomePage = "";
+    public string TitoloHomePage = "";
+    public string SottoTitoloHomePage = "";
+    public string TestoHomePage = "";
+    public string ImmagineHomePage = "";
 
-	protected void Page_Load(object sender, EventArgs e)
-	{
-		// popolo la notizia centrale dell'home page
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        // popolo la notizia centrale dell'home page
         List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
         //oOggetti = oNotizie.GetAll(1,true);
         oOggetti = NotiziaCentraleHomePage;
 
         if (oOggetti.Count > 0)
-		{
-			TitoloHomePage = oOggetti[0].Titolo;
-			SottoTitoloHomePage = oOggetti[0].SottoTitolo;
-			TestoHomePage = oOggetti[0].Testo;
-            if (oOggetti[0].Foto != null) { 
-			    ImmagineHomePage = ResolveUrl(Business.ConstWrapper.CartellaFoto + oOggetti[0].Foto[0].Percorso + "w6" + oOggetti[0].Foto[0].Estensione);
+        {
+            TitoloHomePage = oOggetti[0].Titolo;
+            SottoTitoloHomePage = oOggetti[0].SottoTitolo;
+            TestoHomePage = oOggetti[0].Testo;
+            if (oOggetti[0].Foto != null)
+            {
+                ImmagineHomePage = ResolveUrl(Business.ConstWrapper.CartellaFoto + oOggetti[0].Foto[0].Percorso + "w6" + oOggetti[0].Foto[0].Estensione);
             }
-		}
+        }
 
-		oOggetti = new List<Oggetti.Oggetto>();
+        oOggetti = new List<Oggetti.Oggetto>();
         oOggetti = NotiziePrimoPiano;
 
-		repnews.DataSource = oOggetti;
-		repnews.DataBind();
+        repnews.DataSource = oOggetti;
+        repnews.DataBind();
 
         oOggetti = new List<Oggetti.Oggetto>();
         oOggetti = Eventi;
@@ -43,21 +44,23 @@ public partial class _default : System.Web.UI.Page
 
         oOggetti = new List<Oggetti.Oggetto>();
         oOggetti = Photogallery;
-		repgallery.DataSource = oOggetti;
-		repgallery.DataBind();
+        repgallery.DataSource = oOggetti;
+        repgallery.DataBind();
 
 
-	}
+    }
 
-	public string getUrlPhoto(Oggetti.OggettoFoto[] oFoto, string Dimensione) {
-		string sret = "";
-		if (oFoto.Length > 0) {
-			sret = "<img src=\"" + ResolveUrl(Business.ConstWrapper.CartellaFoto + oFoto[0].Percorso + Dimensione + oFoto[0].Estensione + "\" alt=\"" + oFoto[0].Titolo + "\" />");
-			
-		}
+    public string getUrlPhoto(Oggetti.OggettoFoto[] oFoto, string Dimensione)
+    {
+        string sret = "";
+        if (oFoto.Length > 0)
+        {
+            sret = "<img src=\"" + ResolveUrl(Business.ConstWrapper.CartellaFoto + oFoto[0].Percorso + Dimensione + oFoto[0].Estensione + "\" alt=\"" + oFoto[0].Titolo + "\" />");
 
-		return sret;
-	}
+        }
+
+        return sret;
+    }
 
     public List<Oggetti.Oggetto> NotiziaCentraleHomePage
     {
@@ -67,8 +70,9 @@ public partial class _default : System.Web.UI.Page
             {
                 return (List<Oggetti.Oggetto>)HttpContext.Current.Cache["NotiziaCentraleHomePage"];
             }
-            else {
-								Notizie oNotizie = new Notizie(TipoOggetto.News);
+            else
+            {
+                Notizie oNotizie = new Notizie(TipoOggetto.News);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
                 oOggetti = oNotizie.GetHomePage(1, true);
                 NotiziaCentraleHomePage = oOggetti;
@@ -88,7 +92,7 @@ public partial class _default : System.Web.UI.Page
             }
             else
             {
-								Notizie oNotizie = new Notizie(TipoOggetto.News);
+                Notizie oNotizie = new Notizie(TipoOggetto.News);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
                 oOggetti = oNotizie.GetHomePage(5, false);
                 NotiziePrimoPiano = oOggetti;
@@ -107,10 +111,10 @@ public partial class _default : System.Web.UI.Page
                 return (List<Oggetti.Oggetto>)HttpContext.Current.Cache["Photogallery"];
             }
             else
-            {                
-								Notizie oNotizie = new Notizie(TipoOggetto.Photogallery);
+            {
+                Notizie oNotizie = new Notizie(TipoOggetto.Photogallery);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
-                oOggetti = oNotizie.GetAll(5, true,1);
+                oOggetti = oNotizie.GetAll(5, true, 1);
                 Photogallery = oOggetti;
                 return oOggetti;
             }
@@ -128,7 +132,7 @@ public partial class _default : System.Web.UI.Page
             }
             else
             {
-								Notizie oNotizie = new Notizie(TipoOggetto.Eventi);
+                Notizie oNotizie = new Notizie(TipoOggetto.Eventi);
                 List<Oggetti.Oggetto> oOggetti = new List<Oggetti.Oggetto>();
                 oOggetti = oNotizie.GetAll(3, true, 1);
                 Eventi = oOggetti;
