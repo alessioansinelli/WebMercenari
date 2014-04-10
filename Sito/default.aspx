@@ -6,7 +6,7 @@
 
 <%-- Aggiungere qui i controlli del contenuto --%>
 <asp:Content ID="menu" runat="server" ContentPlaceHolderID="menu">
-	<uc1:menu ID="menu1" runat="server" />
+    <uc1:menu ID="menu1" runat="server" />
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="addheadcontent">
