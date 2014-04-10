@@ -24,6 +24,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", ".", "{640710E0-8979
 		VWDPort = "15419"
 		VWDDynamicPort = "false"
 		VWDVirtualPath = "/"
+		SlnRelativePath = "..\Sito\"
 		StartServerOnDebug = "false"
 	EndProjectSection
 EndProject
