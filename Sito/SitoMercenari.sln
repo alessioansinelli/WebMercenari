@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", ".", "{640710E0-8979-4280-B7EE-EAABF56A4FAA}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -25,7 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", ".", "{640710E0-8979
 		StartServerOnDebug = "false"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalleryUploader", "..\GalleryUploader\GalleryUploader\GalleryUploader.csproj", "{2D1E813D-4D3B-45FA-930B-96B1DB610940}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSender", "..\ImageSender\ImageSender\ImageSender.csproj", "{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,21 +57,21 @@ Global
 		{640710E0-8979-4280-B7EE-EAABF56A4FAA}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{640710E0-8979-4280-B7EE-EAABF56A4FAA}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 		{640710E0-8979-4280-B7EE-EAABF56A4FAA}.Release|x86.ActiveCfg = Debug|Any CPU
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.32|Any CPU.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.32|Mixed Platforms.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.32|Mixed Platforms.Build.0 = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.32|x86.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.32|x86.Build.0 = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Debug|x86.ActiveCfg = Debug|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Debug|x86.Build.0 = Debug|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Release|Any CPU.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Release|Mixed Platforms.Build.0 = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Release|x86.ActiveCfg = Release|x86
-		{2D1E813D-4D3B-45FA-930B-96B1DB610940}.Release|x86.Build.0 = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.32|Any CPU.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.32|Mixed Platforms.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.32|Mixed Platforms.Build.0 = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.32|x86.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.32|x86.Build.0 = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Debug|x86.ActiveCfg = Debug|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Debug|x86.Build.0 = Debug|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|Any CPU.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|x86.ActiveCfg = Release|x86
+		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
