@@ -11,6 +11,18 @@
 	<meta name="author" content="Associazione Aranceri Mercenari" />
 	<meta name="keywords" content="Aranceri, Aranceri Mercenari,Gente da Piola, piazza del Rondolino, Rondolino, Mercenari Ivrea, Carnevale Ivrea, Carnevale, Battaglia arance, Tiro arance, arance, Mugnaia, Generale, Pifferi, Tamburi, Abbà, Stato Maggiore, Vivandiere, Arance, Giovedì grasso, Castello Ivrea, Dora, Baltea, Bajo Dora, Fagioli grassi, Vin brulè, festa in maschera, sfilata, Aranceri Arduini, Aranceri Scacchi, Aranceri Picche, Aranceri Morte, Aranceri Tuchini, Aranceri Diavoli, Aranceri Pantera Nera, Aranceri Credendari" />
 	<asp:ContentPlaceHolder ID="addheadcontent" runat="server"></asp:ContentPlaceHolder>
+    <!-- Google Analytics --> 
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21345901-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 <body>
 	<div id="container" class="container_12">		
@@ -35,17 +47,7 @@
     Histats.track_hits();} catch(err){};
     </script></a>
     <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1377992&101" alt="statistiche sito" border="0"></a></noscript>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21345901-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+    
     <!-- Histats.com  END  -->
     <!-- Javascript import -->
     <script type="text/javascript" src="/js/jquery.js" language="javascript"></script>
