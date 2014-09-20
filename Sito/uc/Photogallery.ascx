@@ -22,7 +22,7 @@
 		 %>
 <asp:Repeater ID="repFoto" runat="server">
     <HeaderTemplate>
-        <div class="gallery Collage">
+        <div class="gallery <% if (Collage) Response.Write("Collage"); %>">
     </HeaderTemplate>
     <ItemTemplate>
        

@@ -7,5 +7,5 @@
 <div class="sottotitolo"><% = SottoTitolo %></div>
 <div class="testo"><% = TestoNotizia %></div>
 <div class="pgnews">
-<uc1:Photogallery ID="Photogallery1" runat="server" TipoOggetto="News"  ShowShare="False" />
+<uc1:Photogallery ID="Photogallery1" runat="server" TipoOggetto="News"  ShowShare="False" Collage="False" />
 </div>

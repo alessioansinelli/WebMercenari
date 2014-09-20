@@ -1,7 +1,7 @@
 ﻿.programma .titolo{background:transparent url(/images/titoli/programma.png) no-repeat scroll 30px 0; height:45px; margin-top:10px;}
 .titolo img{margin-top:3px;}
 
-a, a:hover {text-decoration:none; color:#5e121c; font-weight:bold;font-style:italic;}
+a, a:hover {text-decoration:none; color:#5e121c; font-weight:bold;}
 
 
 ul.calendario{list-style-type:circle !important; list-style-position:inside !important;}

@@ -33,6 +33,11 @@
                     <h3 class="c">L'Ombrellone dei Mercenari</h3>
                 </li>
                 <li>
+                    <a href="http://www.unavoltanticamente.it/blog/index.php" title="Una Volta Anticamente" target="_blank">
+                    <img src="images/link/uva_logo.jpg" alt="unavoltaanticamente.it" /></a>
+                    <h3 class="c">Una Volta Anticamente.it</h3>
+                </li>
+                <li>
                     <a href="http://www.assodipicche.it" title="Associazione Aranceri Asso di Picche" target="_blank">
                     <img src="images/link/picche.png" alt="Associazione Aranceri Asso di Picche" /></a>
                     <h3 class="c">Aranceri Asso di Picche</h3>
