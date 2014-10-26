@@ -31,7 +31,7 @@
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
     <form id="form1" runat="server">
     <div class="sede">
-        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />LA SEDE</div>
         <div class="j grid_8 left">
             <p>
                 Un luogo importantissimo per la vita della squadra è sicuramente la "SEDE", dove

@@ -1,5 +1,5 @@
 ﻿div.homepage{margin-top:15px;}
-.news .titolo{background:transparent url(/images/titoli/notizie.png) no-repeat scroll 30px 0; height:45px; margin-top:10px;}
+.news .titolo{height:45px; margin-top:10px; font-size:2.7em; font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;}
 
 .pnewshome {margin:10px 0;}
 .pnewshome a{color:#5e121c;text-decoration:none;font-weight:bold;}

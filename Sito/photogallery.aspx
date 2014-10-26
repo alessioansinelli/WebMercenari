@@ -16,7 +16,9 @@
 
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
     <div class="foto">
-        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>        
+        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            GALLERIA FOTO
+        </div>        
         <div class="j grid_8 left">
         
             <uc3:Photogallery ID="Photogallery1" runat="server" TipoOggetto="Photogallery" AllowPagination="true" ShowShare="true" ShowShareUrl="photogallery.aspx?id" />

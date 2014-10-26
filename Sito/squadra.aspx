@@ -16,7 +16,9 @@
     <form id="form1" runat="server">
     <div class="squadra">
         <div class="titolo grid_12">
-            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            LA SQUADRA
+        </div>
         <div class="grid_8 j">
             <h1>
                 I MERCENARI DEL PURTIGAL - Un venerdì notte del dicembre 1973 in un bar...

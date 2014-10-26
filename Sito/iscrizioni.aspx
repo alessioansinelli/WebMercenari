@@ -17,7 +17,9 @@
     <form id="form1" runat="server">
     <div class="iscrizioni">
         <div class="titolo grid_12">
-            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            ISCRIZIONI 2015
+        </div>
         <div class="j grid_8 left">
             <p>
                 Le iscrizioni per il Carnevale 2015 sono aperte da <strong>Venerdì 9 gennaio</strong>

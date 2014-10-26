@@ -18,7 +18,9 @@
 
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
     <div class="link">
-        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>        
+        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            LINK
+        </div>        
         <div class="grid_8">
             <h1>Carnevale</h1>
             <ul class="link linkpage">

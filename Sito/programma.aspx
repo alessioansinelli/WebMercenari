@@ -17,7 +17,9 @@
     <form id="form1" runat="server">
     <div class="programma">
         <div class="titolo grid_12">
-            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            PROGRAMMA
+        </div>
         <div class="j grid_8 left">
             <h2>Domenica 6 Gennaio 2014 - Ore 09.00</h2>
             <p>
