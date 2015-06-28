@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using System.IO;
+using Gestione;
 
 /// <summary>
 /// Summary description for BeService

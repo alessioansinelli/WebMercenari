@@ -10,6 +10,9 @@ using Mercenari.Data;
 using System.Data;
 using System.IO;
 
+
+namespace Gestione { 
+
 /// <summary>
 /// Summary description for Immagini
 /// </summary>
@@ -430,5 +433,7 @@ public class Immagini
     private const string sqlDeleteSingleObject = "DELETE FROM tImage where tImageID=@tImageID";
 
 		private const string sqlDeleteFromRelated = "delete from tRelatedItem where tObjectRelatedId=@tImageID and tObjectId=@tObjectParentId";
+
+}
 
 }
