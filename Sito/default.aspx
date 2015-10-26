@@ -21,7 +21,7 @@
             <div class="grid_6">
                 <h1>Concorso per le scuole "Il nostro Carnevale"</h1>
                 <p class="pnewshome pnewsconcorso">
-                    <a href="concorso.aspx" title="Approfondisci">Il concorso, alla sua prima edizione, è organizzato dalla Fondazione dello Storico Carnevale di Ivrea e
+                    <a href="concorso.aspx" title="Approfondisci">Il concorso, alla sua seconda edizione, è organizzato dalla Fondazione dello Storico Carnevale di Ivrea e
                     dall’Associazione Aranceri Mercenari, con il patrocinio della Città di Ivrea e in collaborazione con l’Assessorato ai 
                     Sistemi Educativi.</a>
                 </p>

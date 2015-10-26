@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="addheadcontent">
     <link rel="stylesheet" type="text/css" href="/css/programma.css" />
-    <title>Associazione Aranceri Mercenari - 1° Edizione Concorso "Il nostro Carnevale"</title>
+    <title>Associazione Aranceri Mercenari - 2° Edizione Concorso "Il nostro Carnevale"</title>
     <meta name="description" content="Concorso Il nostro Carnevale, rivolto alle scuole secondarie di primo grado della città di Ivrea. "  />
 </asp:Content>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
@@ -23,7 +23,7 @@
         <div class="j grid_8 left">
             <h2>Organizzatori</h2>
             <p>
-                Il concorso, alla sua prima edizione, è organizzato dalla Fondazione dello Storico Carnevale di Ivrea e
+                Il concorso, alla sua seconda edizione, è organizzato dalla Fondazione dello Storico Carnevale di Ivrea e
                 dall’Associazione Aranceri Mercenari, con il patrocinio della Città di Ivrea e in collaborazione con l’Assessorato ai 
                 Sistemi Educativi.
             </p>
@@ -38,8 +38,10 @@
                 - contenere quanto sopra indicato
                 - può essere utilizzata qualsiasi tecnica (matita, pennarello, tempera, collage, tecniche miste, ecc.)
             </p>     
-            <h2><a href="/doc/2015/ilmiocarnevale2015.pdf">Clicca per visualizzare il bando pubblico</a></h2>  <br />
-            <p><img src="/images/concorso/infilzata.jpg" /></p>     
+            <!--<h2><a href="/doc/2015/ilmiocarnevale2015.pdf">Clicca per visualizzare il bando pubblico</a></h2>  <br />-->
+            <p>
+                Il vincitore del concorso 2015 : <br />
+                <img src="http://www.mercenari.it/public/img/05/79/w8.jpg" /></p>
         </div>
         <div class="grid_4">
         
