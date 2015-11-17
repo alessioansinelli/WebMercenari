@@ -119,10 +119,10 @@ public class Immagini
         DAL.Execute(dbC);
 
         dbC = DAL.CreateCommand();
-				dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder+1 where tObjectRelatedId <> " + oFoto.ID.ToString() + " AND tObjectId="+ (int)oFoto.ParentObjectID +" and tObjectRelatedType = 2";
+		dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder+1 where tObjectRelatedId <> " + oFoto.ID.ToString() + " AND tObjectId="+ (int)oFoto.ParentObjectID +" and tObjectRelatedType = 2";
 
-				// dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
-				// " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
+		// dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
+		// " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
 
         DAL.Execute(dbC);
 
@@ -298,7 +298,9 @@ public class Immagini
 
         dbC = DAL.CreateCommand();
 
-				dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId="+oFoto.ParentObjectID);
+				//dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId="+oFoto.ParentObjectID);
+
+                dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId=" + oFoto.ParentObjectID);
 
         if ((Direction == "UP") && (CurrentNumOrder != 1))
         {
@@ -309,7 +311,8 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-						dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
+						//dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
+                        dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.Id + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
 
 
             DAL.Execute(dbC);
@@ -323,7 +326,8 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-						dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
+            dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));			
+            //dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
 
             DAL.Execute(dbC);
 
