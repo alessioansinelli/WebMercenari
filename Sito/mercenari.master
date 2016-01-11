@@ -1,14 +1,15 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mercenari.master.cs" Inherits="mercenari" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="it">
 <head runat="server">
 	<link rel="stylesheet" type="text/css" href="/css/grid.css" />
 	<link rel="stylesheet" type="text/css" href="/css/layout.css" />
 	<link rel="stylesheet" type="text/css" href="/css/menu.css" />
-	<link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" />
-	<link rel="stylesheet" type="text/css" href="/css/collagePlus/transitions.css" />
-	<link rel="stylesheet" type="text/css" href="/css/collagePlus/transitions.css" />
+	<!-- basic stylesheet -->
+	<link rel="stylesheet" href="/royalslider/royalslider.css">
+	<!-- skin stylesheet (change it if you use another) -->
+	<link rel="stylesheet" href="/royalslider/skins/minimal-white/rs-minimal-white.css">
 	<link rel="stylesheet" type="text/css" href="/css/jquery.cookiebar.css" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<meta name="author" content="Associazione Aranceri Mercenari" />
@@ -33,14 +34,15 @@
 	</div>
 	<!-- Histats.com  END  -->
 	<!-- Javascript import -->
-	<script type="text/javascript" src="/js/jquery.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/jquery.form.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/lightbox/jquery.lightbox-0.5.min.js" language="javascript"></script>
+	<script type="text/javascript" src="/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+	<!--<script type="text/javascript" src="/js/lightbox/jquery.lightbox-0.5.min.js" language="javascript"></script>
 	<script type="text/javascript" src="/js/collagePlus/jquery.collagePlus.js" language="javascript"></script>
 	<script type="text/javascript" src="/js/collagePlus/extras/jquery.collageCaption.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/collagePlus/extras/jquery.removeWhitespace.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/cookie/jquery.cookiebar.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/mercenari.js" language="javascript"></script>
+	<script type="text/javascript" src="/js/collagePlus/extras/jquery.removeWhitespace.js" language="javascript"></script>-->
+	<script src="/royalslider/jquery.royalslider.min.js"></script>
+	<script type="text/javascript" src="/js/cookie/jquery.cookiebar.js"></script>
+	<script type="text/javascript" src="/js/mercenari.js"></script>
 	<asp:ContentPlaceHolder ID="addScript" runat="server"></asp:ContentPlaceHolder>
 </body>
 </html>
