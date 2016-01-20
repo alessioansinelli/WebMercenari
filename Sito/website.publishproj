@@ -21,7 +21,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     <SourceWebVirtualPath>/Sito</SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SourceWebProject>C:\Users\Alessio\Documents\WebMercenari\Sito</SourceWebProject>
-    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/3/ROOT</SourceWebMetabasePath>
+    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/6/ROOT</SourceWebMetabasePath>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

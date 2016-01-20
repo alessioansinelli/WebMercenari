@@ -9,7 +9,7 @@ using System.Reflection;
 using Mercenari.Data;
 using System.Data;
 using System.IO;
-
+using ImageResizer;
 
 namespace Gestione { 
 
@@ -177,24 +177,35 @@ public class Immagini
 
 
                     // da sostituire con chiave nel web.config
-                    string PercorsoFile = HttpContext.Current.Server.MapPath(ConstWrapper.CartellaFoto);
+                    string PercorsoFile = HttpContext.Current.Server.MapPath(ConstWrapper.CartellaFoto) + pathdef;
                     //NomeFile = IdFile + "_w1" + EstensioneFile;
 
                     List<string[]> oListDimensioni = new List<string[]>();
 
-                    for (int iRow = 1; iRow < 13; iRow++)
+                    for (var iRow = 1; iRow < 13; iRow++)
                     {
-                        string[] oStr = new string[4];
-                        double width = (iRow * 80) - 20;
-                        double height = Math.Ceiling(width / ProporzioneImg);
-                        oStr[0] = pathdef + "\\";
-                        oStr[1] = "w" + iRow + estensione;
-                        oStr[2] = width.ToString();
-                        oStr[3] = height.ToString();
+                        double width = 0;
+                        double height;
 
-                        oListDimensioni.Add(oStr);
+                        if (ProporzioneImg > 1)
+                        {
+                            /* Larghezza maggiore altezza */
+                            width = (iRow * 80) - 20;
+                            height = Math.Ceiling(width * ProporzioneImg);
+                        }
+                        else
+                        {
+                            width = (iRow * 80) - 20;
+                            height = Math.Ceiling(width / ProporzioneImg);
+                        }
 
-                        SalvaSuFileSystem(PercorsoFile + pathdef + "\\", oStr[1].ToString(), oImage, int.Parse(width.ToString()), int.Parse(height.ToString()));
+                        if (!Directory.Exists(PercorsoFile))
+                        {
+                            Directory.CreateDirectory(PercorsoFile);
+                        }
+
+                        //Let the image builder add the correct extension based on the output file type
+                        ImageBuilder.Current.Build(oImage, PercorsoFile + "\\" + "w" + iRow, new ResizeSettings(string.Format("width={0}&height={1}&format={2}", width, height, estensione)), false, true);
                     }
 
                     iRetVal = 1;
