@@ -1,6 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mercenari.master" AutoEventWireup="true"
-    CodeFile="iscrizioni.aspx.cs" Inherits="_iscrizioni" %>
-
+﻿<%@ page title="" language="C#" masterpagefile="~/mercenari.master" autoeventwireup="true" inherits="_iscrizioni" CodeFile="~/iscrizioni.aspx.cs" %>
 <%@ Register Src="uc/menu.ascx" TagName="menu" TagPrefix="uc1" %>
 <%@ Register Src="uc/contenuto.ascx" TagName="contenuto" TagPrefix="uc2" %>
 <%@ Register Src="uc/Appuntamenti.ascx" TagName="Appuntamenti" TagPrefix="uc3" %>
@@ -22,7 +20,7 @@
         </div>
         <div class="j grid_8 left">
             <p>
-                Le iscrizioni per il Carnevale 2015 sono aperte da <strong>Venerdì 9 gennaio</strong>
+                Le iscrizioni per il Carnevale 2016 sono aperte da <strong>Venerdì 9 gennaio</strong>
                 a <strong>domenica 8 Febbraio</strong>, e si svolgono solo ed esclusivamente durante
                 le riunioni presso la <a href="/sede.aspx" title="Sede dei Mercenari">sede</a>.
                 Unica eccezione per domenica 8 Febbraio, quando saremo al consueto mercatino degli
