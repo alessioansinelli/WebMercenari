@@ -99,10 +99,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:15419/BeService.asmx">
-      <UrlBehavior>Static</UrlBehavior>
+    <WebReferenceUrl Include="http://www.mercenari.it/BeService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\MercenariUpdater\</RelPath>
-      <UpdateFromURL>http://localhost:15419/BeService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://www.mercenari.it/BeService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
