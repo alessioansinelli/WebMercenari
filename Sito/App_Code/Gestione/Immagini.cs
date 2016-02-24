@@ -191,7 +191,7 @@ public class Immagini
                         {
                             /* Larghezza maggiore altezza */
                             width = (iRow * 80) - 20;
-                            height = Math.Ceiling(width * ProporzioneImg);
+                            height = Math.Ceiling(width / ProporzioneImg);
                         }
                         else
                         {

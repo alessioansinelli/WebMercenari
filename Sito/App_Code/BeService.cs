@@ -42,7 +42,7 @@ public class BeService : System.Web.Services.WebService {
     }
 
 
-		[WebMethod]
+		[WebMethod(EnableSession = true)]
 		public bool SaveImage(string FileName, byte[] oImage, int GalleryID, string NomeUtente, string Password)
 		{
 
