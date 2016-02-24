@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ImageSender_MercenariUpdater_BeService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:15419/BeService.asmx</Value>
+      <Value Profile="(Default)">http://www.mercenari.it/BeService.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>
