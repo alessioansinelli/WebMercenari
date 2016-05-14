@@ -37,6 +37,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -93,16 +95,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:15419/BeService.asmx">
-      <UrlBehavior>Static</UrlBehavior>
+    <WebReferenceUrl Include="http://www.mercenari.it/BeService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\MercenariUpdater\</RelPath>
-      <UpdateFromURL>http://localhost:15419/BeService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://www.mercenari.it/BeService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -113,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\MercenariUpdater\BeService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

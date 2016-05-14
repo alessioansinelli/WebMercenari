@@ -17,7 +17,9 @@
     <form id="form1" runat="server">
     <div class="canzoniere">
         <div class="titolo grid_12">
-            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            IL CANZONIERE DEI MERCENARI
+        </div>
         <div>
         <div class="grid_4 c">
             <div>

@@ -15,7 +15,9 @@
     <form id="form1" runat="server">
     <div class="news">
         <div class="titolo grid_12">
-            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>
+            <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            NOTIZIE
+        </div>
         <div class="grid_8">
             <asp:Repeater ID="repnews" runat="server">
                 <HeaderTemplate>
