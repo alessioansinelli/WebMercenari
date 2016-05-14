@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using Business;
-using System.Data.OleDb;
 using System.Drawing;
-using System.Reflection;
 using Mercenari.Data;
 using System.Data;
 using System.IO;
 using ImageResizer;
 
-namespace Gestione { 
+namespace Gestione
+{
 
-/// <summary>
-/// Summary description for Immagini
-/// </summary>
-public class Immagini
+    /// <summary>
+    /// Summary description for Immagini
+    /// </summary>
+    public class Immagini
 {
 
     private DataLayer DAL = new DataLayer();
