@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using Business;
-using System.Data.OleDb;
 using System.Drawing;
-using System.Reflection;
 using Mercenari.Data;
 using System.Data;
 using System.IO;
+using ImageResizer;
 
-/// <summary>
-/// Summary description for Immagini
-/// </summary>
-public class Immagini
+namespace Gestione
+{
+
+    /// <summary>
+    /// Summary description for Immagini
+    /// </summary>
+    public class Immagini
 {
 
     private DataLayer DAL = new DataLayer();
@@ -116,10 +117,10 @@ public class Immagini
         DAL.Execute(dbC);
 
         dbC = DAL.CreateCommand();
-				dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder+1 where tObjectRelatedId <> " + oFoto.ID.ToString() + " AND tObjectId="+ (int)oFoto.ParentObjectID +" and tObjectRelatedType = 2";
+		dbC.CommandText = "update tRelatedItem set tRelatedItemOrder=tRelatedItemOrder+1 where tObjectRelatedId <> " + oFoto.ID.ToString() + " AND tObjectId="+ (int)oFoto.ParentObjectID +" and tObjectRelatedType = 2";
 
-				// dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
-				// " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
+		// dbC.CommandText = ("update tImage SET tImageNumOrder = tImageNumOrder + 1 " +
+		// " WHERE tImageID <> " + oFoto.ID.ToString() + " and tObjectID=" + (int)oFoto.ParentObjectID);
 
         DAL.Execute(dbC);
 
@@ -174,24 +175,35 @@ public class Immagini
 
 
                     // da sostituire con chiave nel web.config
-                    string PercorsoFile = HttpContext.Current.Server.MapPath(ConstWrapper.CartellaFoto);
+                    string PercorsoFile = HttpContext.Current.Server.MapPath(ConstWrapper.CartellaFoto) + pathdef;
                     //NomeFile = IdFile + "_w1" + EstensioneFile;
 
                     List<string[]> oListDimensioni = new List<string[]>();
 
-                    for (int iRow = 1; iRow < 13; iRow++)
+                    for (var iRow = 1; iRow < 13; iRow++)
                     {
-                        string[] oStr = new string[4];
-                        double width = (iRow * 80) - 20;
-                        double height = Math.Ceiling(width / ProporzioneImg);
-                        oStr[0] = pathdef + "\\";
-                        oStr[1] = "w" + iRow + estensione;
-                        oStr[2] = width.ToString();
-                        oStr[3] = height.ToString();
+                        double width = 0;
+                        double height;
 
-                        oListDimensioni.Add(oStr);
+                        if (ProporzioneImg > 1)
+                        {
+                            /* Larghezza maggiore altezza */
+                            width = (iRow * 80) - 20;
+                            height = Math.Ceiling(width / ProporzioneImg);
+                        }
+                        else
+                        {
+                            width = (iRow * 80) - 20;
+                            height = Math.Ceiling(width / ProporzioneImg);
+                        }
 
-                        SalvaSuFileSystem(PercorsoFile + pathdef + "\\", oStr[1].ToString(), oImage, int.Parse(width.ToString()), int.Parse(height.ToString()));
+                        if (!Directory.Exists(PercorsoFile))
+                        {
+                            Directory.CreateDirectory(PercorsoFile);
+                        }
+
+                        //Let the image builder add the correct extension based on the output file type
+                        ImageBuilder.Current.Build(oImage, PercorsoFile + "\\" + "w" + iRow, new ResizeSettings(string.Format("width={0}&height={1}&format={2}", width, height, estensione)), false, true);
                     }
 
                     iRetVal = 1;
@@ -295,7 +307,9 @@ public class Immagini
 
         dbC = DAL.CreateCommand();
 
-				dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId="+oFoto.ParentObjectID);
+				//dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId="+oFoto.ParentObjectID);
+
+                dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=@NewNumOrder where tObjectRelatedId=@Id and tObjectId=" + oFoto.ParentObjectID);
 
         if ((Direction == "UP") && (CurrentNumOrder != 1))
         {
@@ -306,7 +320,8 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-						dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
+						//dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
+                        dbC.CommandText = "UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder - 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID);
 
 
             DAL.Execute(dbC);
@@ -320,7 +335,8 @@ public class Immagini
             DAL.Execute(dbC);
 
             dbC = DAL.CreateCommand();
-						dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
+            dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));			
+            //dbC.CommandText = ("UPDATE tRelatedItem set tRelatedItemOrder=" + CurrentNumOrder + " where tObjectRelatedId <> " + oFoto.ID + " and tRelatedItemOrder=" + (CurrentNumOrder + 1) + " and tObjectID=" + Convert.ToInt32(oFoto.ParentObjectID));
 
             DAL.Execute(dbC);
 
@@ -430,5 +446,7 @@ public class Immagini
     private const string sqlDeleteSingleObject = "DELETE FROM tImage where tImageID=@tImageID";
 
 		private const string sqlDeleteFromRelated = "delete from tRelatedItem where tObjectRelatedId=@tImageID and tObjectId=@tObjectParentId";
+
+}
 
 }

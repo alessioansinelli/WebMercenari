@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Oggetti;
 using System.Data;
-//using AleDBManager;
+using Gestione;
 using Mercenari.Data;
 
 /// <summary>

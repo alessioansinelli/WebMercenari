@@ -18,7 +18,9 @@
 
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
     <div class="link">
-        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" /></div>        
+        <div class="titolo grid_12"><img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
+            LINK
+        </div>        
         <div class="grid_8">
             <h1>Carnevale</h1>
             <ul class="link linkpage">
@@ -31,6 +33,11 @@
                     <a href="http://www.occhiocrepato.com/bastauntiro/" title="Sito Ufficiale dell'Ombrellone dei Mercenari" target="_blank">
                     <img src="images/link/bastauntiro.png" alt="L'Ombrellone dei Mercenari" /></a>
                     <h3 class="c">L'Ombrellone dei Mercenari</h3>
+                </li>
+                <li>
+                    <a href="http://www.unavoltanticamente.it/blog/index.php" title="Una Volta Anticamente" target="_blank">
+                    <img src="images/link/uva_logo.jpg" alt="unavoltaanticamente.it" /></a>
+                    <h3 class="c">Una Volta Anticamente.it</h3>
                 </li>
                 <li>
                     <a href="http://www.assodipicche.it" title="Associazione Aranceri Asso di Picche" target="_blank">

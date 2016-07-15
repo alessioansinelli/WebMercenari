@@ -1,7 +1,7 @@
-﻿.iscrizioni .titolo{background:transparent url(/images/titoli/iscrizioni.png) no-repeat scroll 30px 0; height:45px; margin-top:10px;}
+﻿.iscrizioni .titolo{height:45px; margin-top:10px; font-size:2.7em; font-family:RockwellExtraBold,Georgia, 'Lucida Grande','Lucida Sans Unicode','Lucida Sans', Georgia, Verdana, Tahoma, Arial, Times New Roman;}
 .titolo img{margin-top:3px;}
 
-a, a:hover {text-decoration:none; color:#5e121c; font-weight:bold;font-style:italic;}
+a, a:hover {text-decoration:none; color:#5e121c; font-weight:bold;}
 
 .right a, .right a:hover{font-style:normal;}
 

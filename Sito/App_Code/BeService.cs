@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using System.IO;
+using Gestione;
 
 /// <summary>
 /// Summary description for BeService
@@ -41,7 +42,7 @@ public class BeService : System.Web.Services.WebService {
     }
 
 
-		[WebMethod]
+		[WebMethod(EnableSession = true)]
 		public bool SaveImage(string FileName, byte[] oImage, int GalleryID, string NomeUtente, string Password)
 		{
 

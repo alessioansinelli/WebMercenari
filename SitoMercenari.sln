@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", "Sito\", "{640710E0-8979-4280-B7EE-EAABF56A4FAA}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -19,9 +21,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", "Sito\", "{640710E0-
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "true"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "15419"
+		VWDPort = "15450"
 		VWDDynamicPort = "false"
 		VWDVirtualPath = "/"
+		SlnRelativePath = "Sito\"
 		StartServerOnDebug = "false"
 	EndProjectSection
 EndProject

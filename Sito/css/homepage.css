@@ -4,6 +4,9 @@
 .pnewshome a{color:#5e121c;text-decoration:none;font-weight:bold;}
 .pnewshome a:hover{color:#5e121c;text-decoration:underline;}
 
+.pnewsconcorso {font-size:1.2em; line-height:1.4em;}
+.pnewsconcorso a {text-decoration:none; font-weight:normal;}
+
 .homepage .grid_4 h2{margin:5px 0; text-transform:none;}
 
 .photogallery h2{font-size:14px;}
