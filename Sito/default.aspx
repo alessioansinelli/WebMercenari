@@ -21,9 +21,7 @@
             <div class="grid_6">
                 <h1>Concorso per le scuole "Il nostro Carnevale"</h1>
                 <p class="pnewshome pnewsconcorso">
-                    <a href="concorso.aspx" title="Approfondisci">Il concorso, alla sua seconda edizione, è organizzato dalla Fondazione dello Storico Carnevale di Ivrea e
-                    dall’Associazione Aranceri Mercenari, con il patrocinio della Città di Ivrea e in collaborazione con l’Assessorato ai 
-                    Sistemi Educativi.</a>
+                    <a href="concorso.aspx" title="Approfondisci">L’Associazione Aranceri Mercenari organizza con la collaborazione del Comune di Ivrea e la Fondazione dello Storico Carnevale, il 3° Concorso di disegno riservato agli alunni delle Scuole Secondarie di Primo Grado dell’Istituto Comprensivo Statale Ivrea 1 e Ivrea 2. e L’Istituto parificato “Cardinal Cagliero”, al fine di sensibilizzare ed educare le giovani generazioni al rispetto e partecipazione al nostro Storico Carnevale.</a>
                 </p>
                 <div class="leggitutto"><a href="concorso.aspx">Leggi tutto »</a></div>
                 <h1><% = TitoloHomePage %></h1>
