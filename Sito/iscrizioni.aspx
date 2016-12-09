@@ -37,9 +37,7 @@
                 Calendario iscrizioni 2017</h2>
             <ul class="calendario">
                 <li><strong>Venerdì 13 gennaio 2017</strong>. Dalle ore 21.00 alle ore 24.00</li>
-                <li><strong>Martedì 17 gennaio 2017</strong>. Dalle ore 21.00 alle ore 24.00</li>
                 <li><strong>Venerdì 20 gennaio 2017</strong>. Dalle ore 21.00 alle ore 24.00</li>
-                <li><strong>Martedì 24 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                 <li><strong>Venerdì 27 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                 <li><strong>Martedì 31 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                 <li><strong>Venerdì 03 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
@@ -48,8 +46,7 @@
                 <li><strong>Martedì 14 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                 <li><strong>Venerdì 17 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                 <li><strong>Sabato 18 febbraio 2017</strong>. Ai giardinetti in occasione del concorso musicale.</li>
-                <li><strong>Domenica 19 febbraio 2017</strong>, in piazza Ottinetti. Dalle ore 10.00
-                    alle ore 17.00</li>
+                <li><strong>Domenica 19 febbraio 2017</strong>, in piazza Ottinetti. Dalle ore 10.00 alle ore 17.00</li>
             </ul>
         </div>
         <div class="j grid_4">
