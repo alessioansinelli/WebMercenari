@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="addheadcontent">
     <link rel="stylesheet" type="text/css" href="/css/programma.css" />
-    <title>Associazione Aranceri Mercenari - Programma Carnevale 2014</title>
+    <title>Associazione Aranceri Mercenari - Programma Carnevale 2017</title>
     <meta name="description" content="Programma degli appuntamenti Associazione Aranceri Mercenari. Feste e ritrovi per i giorni di Carnevale."  />
 </asp:Content>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
