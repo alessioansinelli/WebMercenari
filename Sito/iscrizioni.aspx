@@ -36,8 +36,8 @@
                 <br />
                 <h2>Calendario iscrizioni 2017</h2>
                 <ul class="calendario">
-                    <li><strong>Venerdì 13 gennaio 2017</strong>. Dalle ore 21.00 alle ore 24.00</li>
-                    <li><strong>Venerdì 20 gennaio 2017</strong>. Dalle ore 21.00 alle ore 24.00</li>
+                    <li><strong>Venerdì 13 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Venerdì 20 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                     <li><strong>Venerdì 27 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                     <li><strong>Martedì 31 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                     <li><strong>Venerdì 03 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
@@ -46,7 +46,7 @@
                     <li><strong>Martedì 14 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                     <li><strong>Venerdì 17 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
                     <li><strong>Sabato 18 febbraio 2017</strong>. Ai giardinetti in occasione del concorso musicale.</li>
-                    <li><strong>Domenica 19 febbraio 2017</strong>, in piazza Ottinetti. Dalle ore 10.00 alle ore 17.00</li>
+                    <li><strong>Domenica 19 febbraio 2017</strong>, in piazza Ottinetti. Dalle ore 10.00 alle 17.00</li>
                 </ul>
                 <div class="mod_iscrizione">
                     <h2>
@@ -59,8 +59,8 @@
                 <ul class="quote">
                     <li><strong>Socio</strong>. 30,00 €</li>
                     <li><strong>Socio Arancere</strong>: 90,00 €</li>
-                    <li><strong>Socio Junior(12-13-14-15 anni)</strong>: 50,00 €</li>
-                    <li><strong>Piolini(fino a 12 anni)</strong>: 10,00 €</li>
+                    <li><strong>Socio Junior (nati dal 2002 al 2005)</strong>: 50,00 €</li>
+                    <li><strong>Piolini(nati dal 2006 ad oggi)</strong>: 10,00 €</li>
                 </ul>
                 <br />
                 <strong>
