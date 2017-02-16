@@ -69,7 +69,7 @@
 				Pranzo giallo-viola in piazza del Rondolino aspettando la battaglia. 
 				Forza Mercenari che è l'ultimo!
             </p>
-            <h2>Sabato 12 Marzo 2017</h2>
+            <h2>Sabato 11 Marzo 2017</h2>
             <p>
 				Grandiosa cena di chiusura Carnevale.<br />
 				Durante la cena verranno premiati gli aranceri e i soci che si sono contraddistinti durante le giornate di Carnevale.<br />
