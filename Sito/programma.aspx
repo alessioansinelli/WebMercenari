@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="addheadcontent">
     <link rel="stylesheet" type="text/css" href="/css/programma.css" />
-    <title>Associazione Aranceri Mercenari - Programma Carnevale 2017</title>
+    <title>Associazione Aranceri Mercenari - Programma Carnevale 2018</title>
     <meta name="description" content="Programma degli appuntamenti Associazione Aranceri Mercenari. Feste e ritrovi per i giorni di Carnevale."  />
 </asp:Content>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
@@ -21,22 +21,25 @@
             PROGRAMMA
         </div>
         <div class="j grid_8 left">
-            <h2>Domenica 6 Gennaio 2017 - Ore 09.00</h2>
+            <h2>Sabato 6 Gennaio 2018 - Ore 09.00</h2>
             <p>
                 E' ora. Con l'uscita dal Civico Palazzo di buon mattino dei Pifferi e Tamburi,
                 inizia il tanto atteso Carnevale. Dopo la classica passeggiata per le vie di Ivrea
                 allietata dalle note carnascialesche, i Mercenari si trovano per il tradizionale
                 pranzo, che dà inizio ai festeggiamenti per il Carnevale imminente.
+                Prenotazioni entro e non oltre il 3 gennaio a:
+                - Eleonora: 338 470 60 00
+                - Vera: 347 625 73 89
             </p>
-            <h2>Domenica 19 Febbraio 2017 - Ore 10.00-17.30</h2>
+            <h2>Domenica 04 Febbraio 2018 - Ore 10.00-17.30</h2>
             <p>
                 Seconda uscita del generale in divisa ed alzata degli Abbà. <br />
                 Noi Mercenari saremo presenti alla mostra/mercatino dell'Arancere 
                 che si svolge dalle 10.00 alle 17.30 in piazza Ottinetti.
-                La giornata sarà l'ultima data disponibile per iscriversi all'associazione per l'anno 2017, 
+                La giornata sarà l'ultima data disponibile per iscriversi all'associazione per l'anno 2018, 
                 ritardatari avanti.               
             </p>
-            <h2>Giovedì grasso 23 Febbraio 2017 - Ore 21.30</h2>
+            <h2>Giovedì grasso 08 Febbraio 2018 - Ore 21.30</h2>
             <p>
                 Presentazione del Generale e prima uscita a cavallo del Brillante Stato Maggiore.
                 Dalle 21.30...La festa continua: alla rotonda giallo-viola dei giardinetti 
@@ -44,32 +47,32 @@
                 Con questa serata il Carnevale Giallo Viola entra nel vivo, è l'inizio della settimana più 
                 emozionante dell'anno eporediese.                
             </p>
-            <h2>Venerdì 24 Febbraio 2017 - Ore 21.30</h2>
+            <h2>Venerdì 09 Febbraio 2018 - Ore 21.30</h2>
             <p>
                 Alla rotonda giallo-viola dei giardini pubblici bissiamo la folle festa di giovedì grasso;                
             </p>
-            <h2>Sabato 25 febbraio 2017 - Ore 18.30</h2>
+            <h2>Sabato 10 febbraio 2018 - Ore 18.30</h2>
             <p>
                 Appuntamento alla rotonda giallo-viola: radunata di tutti i Mercenari per accodarsi alla sfilata 
                 in onore della Vezzosa Mugnaia, eroina del nostro Carnevale.
                 Al termine della sfilata, mega festa giallo-viola per sciogliere i 
                 nervi in attesa della cruenta imminente battaglia.
             </p>
-            <h2>Domenica 26 febbraio 2017 - Ore 12.00</h2>
+            <h2>Domenica 11 febbraio 2018 - Ore 12.00</h2>
             <p>
                 Pranzo giallo-viola in piazza del Rondolino aspettando la battaglia.<br />
                 Bicchieri in alto che è ora di tirare!
             </p>
-            <h2>Lunedì 27 febbraio 2017 - Ore 12.00</h2>
+            <h2>Lunedì 12 febbraio 2018 - Ore 12.00</h2>
             <p>
 				Pranzo giallo-viola in piazza del Rondolino aspettando la battaglia.
             </p>
-            <h2>Martedì 28 febbraio 2017 - Ore 12.00</h2>
+            <h2>Martedì 13 febbraio 2018 - Ore 12.00</h2>
             <p>
 				Pranzo giallo-viola in piazza del Rondolino aspettando la battaglia. 
 				Forza Mercenari che è l'ultimo!
             </p>
-            <h2>Sabato 11 Marzo 2017</h2>
+            <h2>Sabato 27 Febbraio 2018</h2>
             <p>
 				Grandiosa cena di chiusura Carnevale.<br />
 				Durante la cena verranno premiati gli aranceri e i soci che si sono contraddistinti durante le giornate di Carnevale.<br />

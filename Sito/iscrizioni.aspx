@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="addheadcontent">
     <link rel="stylesheet" type="text/css" href="/css/iscrizioni.css" />
-    <title>Associazione Aranceri Mercenari - Iscrizioni 2017</title>
+    <title>Associazione Aranceri Mercenari - Iscrizioni 2018</title>
     <meta name="description" content="Iscrizioni all' Associazione Aranceri Mercenari. Qui si possono trovare le informazioni e le date relative alle riunioni e iscrizioni all'Associazione Aranceri Mercenari. Passa a trovarci in sede." />
 </asp:Content>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="content">
@@ -17,12 +17,12 @@
         <div class="iscrizioni">
             <div class="titolo grid_12">
                 <img src="images/stemmi/stella_30.png" alt="Stella Mercenari" />
-                ISCRIZIONI 2017
+                ISCRIZIONI 2018
             </div>
             <div class="j grid_8 left">
                 <p>
-                    Le iscrizioni per il Carnevale 2017 sono aperte da <strong>Venerdì 13 gennaio</strong>
-                    a <strong>domenica 19 Febbraio</strong>, e si svolgono solo ed esclusivamente durante
+                    Le iscrizioni per il Carnevale 2018 sono aperte da <strong>Martedì 09 gennaio</strong>
+                    a <strong>domenica 04 Febbraio</strong>, e si svolgono solo ed esclusivamente durante
                 le riunioni presso la <a href="/sede.aspx" title="Sede dei Mercenari">sede</a>.
                 Unica eccezione per la penultima domenica di Carnevale, quando saremo al mercatino degli
                 aranceri di piazza Ottinetti.
@@ -34,38 +34,36 @@
                 loro le varie fasi organizzative.
                 </p>
                 <br />
-                <h2>Calendario iscrizioni 2017</h2>
+                <h2>Calendario iscrizioni 2018</h2>
                 <ul class="calendario">
-                    <li><strong>Venerdì 13 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Venerdì 20 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Venerdì 27 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Martedì 31 gennaio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Venerdì 03 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Martedì 07 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Venerdì 10 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Martedì 14 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Venerdì 17 febbraio 2017</strong>. Dalle ore 21.00 alle 24.00</li>
-                    <li><strong>Sabato 18 febbraio 2017</strong>. Ai giardinetti in occasione del concorso musicale.</li>
-                    <li><strong>Domenica 19 febbraio 2017</strong>, in piazza Ottinetti. Dalle ore 10.00 alle 17.00</li>
+                    <li><strong>Martedì 09 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Venerdì 12 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Martedì 16 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Venerdì 19 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Martedì 23 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Venerdì 26 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Martedì 30 gennaio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Venerdì 02 febbraio 2018</strong>. Dalle ore 21.00 alle 24.00</li>
+                    <li><strong>Domenica 04 febbraio 2018</strong>, in piazza Ottinetti. Dalle ore 10.00 alle 17.00</li>
                 </ul>
                 <div class="mod_iscrizione">
                     <h2>
-                        <a target="_blank" href="/doc/2017/Scaricoresponsabilita2017.pdf">Scarica il modulo da presentare all'iscrizione.</a>
+                        <a target="_blank" href="/doc/2018/Scaricoresponsabilita2018.pdf">Scarica il modulo da presentare all'iscrizione.</a>
                     </h2>
                 </div>
             </div>
             <div class="j grid_4">
-                <h1>Quote Iscrizione 2017</h1>
+                <h1>Quote Iscrizione 2018</h1>
                 <ul class="quote">
                     <li><strong>Socio</strong>. 30,00 €</li>
                     <li><strong>Socio Arancere</strong>: 90,00 €</li>
-                    <li><strong>Socio Junior (nati dal 2002 al 2005)</strong>: 50,00 €</li>
-                    <li><strong>Piolini(nati dal 2006 ad oggi)</strong>: 10,00 €</li>
+                    <li><strong>Socio Junior (nati dal 2003 al 2006)</strong>: 50,00 €</li>
+                    <li><strong>Piolini(nati dal 2007 ad oggi)</strong>: 10,00 €</li>
                 </ul>
                 <br />
                 <strong>
                     <p>
-                        <a href="/doc/2017/Scaricoresponsabilita2017.pdf">NB : Per tutte le iscrizioni è necessaria
+                        <a href="/doc/2018/Scaricoresponsabilita2018.pdf">NB : Per tutte le iscrizioni è necessaria
                         la presentazione del modello di scarico responsabilità, scaricabile <i>qui</i></a>
                     </p>
                 </strong>
