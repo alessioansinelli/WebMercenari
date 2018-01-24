@@ -24,7 +24,7 @@
                 <h2>Organizzatori</h2>
                 <p>
                     L’Associazione Aranceri Mercenari organizza con la collaborazione del Comune di Ivrea e la Fondazione dello Storico Carnevale,
-                 il 3° Concorso di disegno riservato agli alunni delle Scuole Secondarie di Primo Grado dell’Istituto 
+                 il 4° Concorso di disegno riservato agli alunni delle Scuole Secondarie di Primo Grado dell’Istituto 
                 Comprensivo Statale Ivrea 1 e Ivrea 2. e L’Istituto parificato “Cardinal Cagliero”, 
                 al fine di sensibilizzare ed educare le giovani generazioni al rispetto e partecipazione al nostro Storico Carnevale.
                 </p>
@@ -35,27 +35,24 @@
                 che lo colpisce o lo incuriosisce maggiormente, con particolare attenzione alle varie Componenti che vi partecipano.<br />
                     Vista la cospicua partecipazione e la pregevole fattura delle opere consegnate nelle passate edizioni, 
                     abbiamo modificato nel tempo il regolamento, facendo frutto dei suggerimenti e delle critiche mosse.<br />
-                    Abbiamo distribuito nelle Scuole interessate il plico contenente i fogli dove realizzare gli elaborati grafici, che andranno 
-                    consegnati presso le Segreterie Didattiche entro e non oltre Venerdi 23 Dicembre 2016.<br />
+                    Abbiamo distribuito nelle Scuole interessate il plico contenente i fogli dove realizzare gli elaborati grafici.<br />
                     Gli elaborati verranno visionati da esperti, i migliori 20 verranno, pubblicati sui siti www.mercenari.it e 
                     www.storicocarnevaleivrea.it, nonchè digitalizzati ed esposti durante il periodo antecedente a Carnevale lungo il percorso
                      appositamente creato presso i Giardini pubblici di Corso Botta ad Ivrea.<br />
                     Per stabilire i vincitori, I 20 elaborati finalisti saranno giudicati da una giuria di artisti Canavesani.<br />
-                    Le premiazioni avverranno Giovedì "grasso" 23 Febbraio 2017 durante una festa organizzata presso i Giardinetti 
+                    Le premiazioni avverranno Giovedì "grasso" 8 Febbraio 2018 durante una festa organizzata presso i Giardinetti 
                     pubblici di Corso Botta - Ivrea, sotto i colori giallo-viola dei Mercenari. <br />
                     La giornata allietata da musica e libagioni vedrà premiati i realizzatori dei primi tre elaborati classificati con un buono
                      acquisto e tutti i finalisti con un premio di partecipazione.<br />
-                    Alla Scuola di appartenenza dell'elaborato primo  classificato, verrà consegnato un buono acquisto per materiale didattico, 
-                    del valore di 1.000,00 €.<br />
+                    Alla Scuola di appartenenza dell'elaborato primo  classificato, verrà consegnato un buono acquisto per materiale didattico.<br />
                     Lo scopo dell’iniziativa e di far percepire alla collettività l’importanza culturale, educativa e sociale della 
                     manifestazione attraverso i disegni dei ragazzi e tramite ciò sensibilizzare sull’importanza delle scuole pubbliche
                     per la formazione delle future generazioni, dando un piccolo aiuto  economico in questo momento di difficoltà generale.
-                </p>
-                <!--<h2><a href="/doc/2015/ilmiocarnevale2015.pdf">Clicca per visualizzare il bando pubblico</a></h2>  <br />-->
+                </p>                
                 <p>
-                    Il vincitore del concorso 2015 :
+                    La galleria dei finalisti 2018 :
                     <br />
-                    <img src="http://www.mercenari.it/public/img/05/79/w8.jpg" />
+                    <img src="//www.mercenari.it/photogallery.aspx?id=152" />
                 </p>
             </div>
             <div class="grid_4">
