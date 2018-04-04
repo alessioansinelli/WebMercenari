@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sito", "Sito\", "{640710E0-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSender", "ImageSender\ImageSender\ImageSender.csproj", "{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontendComponents", "FrontEndComponents\FrontendComponents.csproj", "{33D2E834-5AAD-4130-842C-63FF20AA8730}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		32|Any CPU = 32|Any CPU
@@ -73,6 +75,24 @@ Global
 		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|Mixed Platforms.Build.0 = Release|x86
 		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|x86.ActiveCfg = Release|x86
 		{3C9987C6-D05A-47E8-ACEA-3BDD94B26F25}.Release|x86.Build.0 = Release|x86
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|Any CPU.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|Mixed Platforms.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|x86.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.32|x86.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Debug|x86.Build.0 = Debug|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|x86.ActiveCfg = Release|Any CPU
+		{33D2E834-5AAD-4130-842C-63FF20AA8730}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

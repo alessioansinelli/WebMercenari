@@ -215,3 +215,7 @@ pip-log.txt
 .mr.developer.cfg
 Sito/public/
 /.vs/SitoMercenari/v15/Server/sqlite3
+
+#node modules
+node_modules/
+FrontEndComponents/assets/temp/
