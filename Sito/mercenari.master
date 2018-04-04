@@ -36,10 +36,6 @@
 	<!-- Javascript import -->
 	<script type="text/javascript" src="/js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.form.js"></script>
-	<!--<script type="text/javascript" src="/js/lightbox/jquery.lightbox-0.5.min.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/collagePlus/jquery.collagePlus.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/collagePlus/extras/jquery.collageCaption.js" language="javascript"></script>
-	<script type="text/javascript" src="/js/collagePlus/extras/jquery.removeWhitespace.js" language="javascript"></script>-->
 	<script src="/royalslider/jquery.royalslider.min.js"></script>
 	<script type="text/javascript" src="/js/cookie/jquery.cookiebar.js"></script>
 	<script type="text/javascript" src="/js/mercenari.js"></script>

@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Mercenari2018.master.cs" Inherits="masterpage_Mercenari2018" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="author" content="Associazione Aranceri Mercenari" />
+    <meta name="keywords" content="Aranceri, Aranceri Mercenari,Gente da Piola, piazza del Rondolino, Rondolino, Mercenari Ivrea, Carnevale Ivrea, Carnevale, Battaglia arance, Tiro arance, arance, Mugnaia, Generale, Pifferi, Tamburi, Abbà, Stato Maggiore, Vivandiere, Arance, Giovedì grasso, Castello Ivrea, Dora, Baltea, Bajo Dora, Fagioli grassi, Vin brulè, festa in maschera, sfilata, Aranceri Arduini, Aranceri Scacchi, Aranceri Picche, Aranceri Morte, Aranceri Tuchini, Aranceri Diavoli, Aranceri Pantera Nera, Aranceri Credendari" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css" />
+    <asp:ContentPlaceHolder ID="addheadcontent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="mast-head">
+            <a href="/" title="Torna alla Home Page">&nbsp;</a>
+            <asp:ContentPlaceHolder ID="menu" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </main>
+</body>
+</html>

@@ -6,8 +6,6 @@
 	<li id="sede"><a href="/sede.aspx" title="La sede">SEDE</a></li>
 	<li id="iscrizioni"><a href="/iscrizioni.aspx">ISCRIZIONI</a></li>
 	<li id="programma"><a href="/programma.aspx" title="Programma Carnevale">PROGRAMMA</a></li>
-	<!--<li id="feste"><a href="/feste.aspx">&nbsp;</a></li>-->
-	<!--<li id="bandiere"><a href="/bandiere.aspx" title="Le bandiere">&nbsp;</a></li>-->
 	<li id="canzoniere"><a href="/canzoniere.aspx" title="Il canzoniere">CANZONI</a></li>
 	<li id="foto"><a href="/foto.aspx" title="Le foto">FOTO</a></li>
 	<li id="link"><a href="/link.aspx" title="Link">LINK</a></li>

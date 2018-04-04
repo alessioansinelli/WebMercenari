@@ -106,6 +106,11 @@ gulp.task('watchFiles',
     function() {
         gulp.watch('assets/css/**/*.scss', ['minifyCss']);
         gulp.watch('assets/js/src/app/**/*.{js,jsx}', ['minifyScripts']);
+    });
+
+gulp.task('watchCss',
+    function () {
+        gulp.watch('assets/css/**/*.scss', ['minifyCss']);
 });
 
 // gulp.task('browser-sync', function () {
