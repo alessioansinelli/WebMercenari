@@ -98,13 +98,15 @@ gulp.task("minifyCss", ["compileSass"], function () {
     return gulp.src("assets/temp/css/main.css")
         .pipe(cssmin())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(gulp.dest('../Sito/css'));
 });
 
-gulp.task('watchFiles', function () {
-    gulp.watch('assets/css/**/*.scss', ['minifyCss']);
-    gulp.watch('assets/js/src/app/**/*.{js,jsx}', ['minifyScripts']);
-})
+gulp.task('watchFiles',
+    function() {
+        gulp.watch('assets/css/**/*.scss', ['minifyCss']);
+        gulp.watch('assets/js/src/app/**/*.{js,jsx}', ['minifyScripts']);
+});
 
 // gulp.task('browser-sync', function () {
 //     browserSync.init({
