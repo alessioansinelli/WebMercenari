@@ -37,5 +37,7 @@
     "react-dom": "^16.3.0",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^5.8.0"
+  }
 }
